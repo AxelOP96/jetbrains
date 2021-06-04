@@ -323,3 +323,211 @@ Here are two examples below:
 var language = "Java"; // String
 var version = 10; // int
 This feature can be a bit controversial: on the one hand, it allows your code to be more concise. On the other hand, since it doesn't indicate the type explicitly, it may affect the code readability in a bad way. For now, it's enough to understand the basic idea. We will not use type inference in our theory so that our educational platform is suitable for people who use earlier versions of Java. But if you would like to practice it, you may use type inference in our exercises as they fully support Java 10.
+
+int i = 0, j = 0, k = 0;
+String s = "s", str = "str";
+
+Enter the number of declared variables in the code fragment.
+
+For example, if you think that eight variables are here, enter the number:
+en este caso son 5 ya que reasignar una variable cuenta como asignarla
+
+<!----- -----!>
+Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to explain how and why our code works.
+
+The Java programming language supports three kinds of comments.
+
+End-of-line comments
+The java compiler ignores any text from // to the end of the line.
+
+class Program {
+    public static void main(String[] args) {
+        // The line below will be ignored
+        // System.out.println("Hello, World");
+        // It prints the string "Hello, Java"
+        System.out.println("Hello, Java"); // Here can be any comment
+    }
+}
+In the example above the text after // is ignored by the compiler.
+
+Multi-line comments
+The compiler ignores any text from /* and the nearest */. It can be used as multiple and single-line comments.
+
+class Program {
+    public static void main(String[] args) {
+        /* This is a single-line comment */
+        /*  This is an example of
+            a multi-line comment */
+  }
+}
+You can use comments inside other comments:
+
+class Program {
+    public static void main(String[] args) {
+        /*
+        System.out.println("Hello"); // print "Hello"
+        System.out.println("Java");  // print "Java"
+        */
+    }
+}
+The part of the code above is ignored by the compiler because of /* ... */ comments.
+
+Java documentation comments
+The compiler ignores any text from /** to */ just like it ignores multi-line comments.
+
+These kinds of comments can be used to automatically generate documentation about your source code by using the javadoc tool. Usually, these comments are placed above declarations of classes, interfaces, methods and so on. Some special labels such as @param or @return are often used for controlling the tool. However, they are optional and we will not deal with them for now. Just don't be surprised in case you see one.
+
+See the example below.
+
+class Program {
+    /**
+     * The main method accepts an array of string arguments
+     *
+     * @param args from the command line
+     */
+    public static void main(String[] args) {
+        // do nothing
+    }
+}
+Do not be afraid if you have not understood the documentation comments completely. This will be considered in other topics.
+
+<!---------- ----------!>
+There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to write code that is clean and easy to read? This is trickier than it may seem at the beginning, and this is quite important: in real life, programming is a process that involves a lot of people that work together. In fact, you often spend more time reading code than writing it. Even when you're working alone and writing a program "for yourself", after a while, it may become difficult for you to understand your own program if it's badly written.
+
+That is why you need to follow common best practices concerning programming style. This way, other programmers and yourself could read your code easily. Writing good code may help you get your first job and make a good impression on your colleagues.
+
+Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread. – The Tidyverse Style Guide by Hadley Wickham
+Java Conventions
+A list of recommendations on how to write code for some particular language is usually called coding style guide or style conventions. The conventions help developers standardize and support well-readable code. They are more like recommendations than strict rules, but by following them a programmer creates code that is clean and consistent so that other developers will be happy to work with it.
+
+In most cases, companies and individual developers do not create their own style conventions. There are two generally accepted Java conventions that are used all over the world:
+
+Oracle Code Conventions
+Google Style Guide
+Sometimes they could be modified or extended by a particular company to meet their needs.
+
+In all our code examples and exercises, we will follow the Oracle Code Conventions and we urge you to do the same while learning here. After completing the course, you can follow any conventions you want. Actually, it doesn't really matter which one to follow, the main challenge is to be consistent across your code.
+There is no need to learn all the conventions at once: just remember to open them from time to time after learning some new syntactic concepts. We will provide the information throughout the course when needed.
+
+Now let's look at some of the most basic Java conventions according to Oracle Code Conventions.
+
+The number of spaces
+The first convention is to use 4 spaces as the unit of indentation in the whole program code. You have already seen our code examples before and you might note that we used this value there.
+
+Good:
+
+public class NumberOfSpacesExample {
+
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}
+Very bad:
+
+public class NumberOfSpacesExample {
+
+  public static void main(String[] args) {
+     System.out.println("Hi!");
+   System.out.println("I'm a Java program.");
+ }
+}
+As you can see, the second code example looks ugly and requires some effort to be read.
+
+Sometimes tabulation is used to create an indentation. However, tab may correspond to 8 spaces instead of 4 in some IDEs, that is why we recommend you stick to spaces in this course.
+The location of curly braces
+Some time ago, developers were arguing a lot about where to put opening and closing curly braces in C-like programming languages. The next convention describes what to do in Java:
+
+Put the opening curly brace at the end of the line where the block begins.
+Put the closing curly brace at the beginning of the next line.
+There are two examples below which illustrate these rules.
+
+Good:
+
+public class NumberOfSpacesExample {
+
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}
+Not that bad, but not Java-way:
+
+public class NumberOfSpacesExample 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}
+Here, the second code example doesn't look ugly, but it is just not a Java way. Most of the common conventions follow the first example.
+
+Avoid extra spaces
+Sometimes you may add some spaces even if you don't really need them. This will reduce the readability of your code.
+
+Avoid extra spaces within parentheses.
+Good:
+
+System.out.println("Hello!");
+Bad:
+
+System.out.println( "Hello!" );
+Avoid an extra space before an open parenthesis.
+Good:
+
+System.out.println("OK");
+Bad:
+
+System.out.println ("Shifted braces");
+Avoid extra spaces before a semicolon:
+Good:
+
+System.out.println("No extra spaces");
+Bad:
+
+System.out.println("It has an extra space") ;
+The length of a line
+The last recommendation concerns the maximum length of a line. Oracle Code Conventions propose avoiding lines longer than 80 characters. Plenty of developers consider this restriction as outdated since modern monitors can easily display longer lines, whereas others would go on following this rule, which is handy, for example, if laptops are used.
+
+Keeping ourselves off this dispute, we will use 80 characters in the course to avoid scrollbars in our examples and web code editor. We recommend that you do the same while learning here, but keep in mind that you can violate this limitation after you start working on a real project or learning elsewhere.
+
+Other popular limit values are 100, 120, and sometimes even 140 characters.
+
+Conclusion
+Style guides provide the conventions to help create well-readable and consistent code. For Java, the two most popular ones are Oracle Code Conventions and Google style guide. One of their main objectives is to provide an effective way for developers to work on the code together. Because of that, it is not as important to strictly follow one of the existing style guides as to stay consistent within the project. Later on, you will learn a lot of things about Java and become a skillful programmer, but maintaining the code style will always remain important. Do not worry, though: you do not need to learn all the conventions at once. In all the following topics, we will follow the Oracle Code Conventions and encourage you to do it with us!
+<!---------- Why is naming important?---------!>
+
+As you may know, every variable has a name that uniquely identifies it among other variables. Giving a good name to a variable may not be as simple as it seems. Experienced programmers put a lot of care into naming to make their programs easy to understand. It is important because programmers spend a lot of their time getting through the code written by other programmers. If variables have bad names, even your own code will seem unclear to you in a few months.
+
+Always try to give descriptive and concise names to all variables. As a result, any programmer will enjoy your code for a long time.
+
+In addition, there are two sets of rules that restrict the possible names for variables.
+
+Rules for naming variables
+Java has some rules for naming variables:
+
+names are case-sensitive;
+a name can include Unicode letters, digits, and two special characters ($, _);
+a name cannot start with a digit;
+a name must not be a keyword (class, static, int are illegal names).
+Based on these rules, you may conclude that whitespaces are not allowed in the name of a variable.
+
+It is important not to break these rules; otherwise, the program will not work.
+Here are some valid names of variables:
+
+number, $ident, bigValue, _val, abc, k, var
+Note that to keep backward compatibility the word var can be used as a variable name even after Java 10 was released.
+And here are some invalid ones:
+
+@ab, 1c, !ab, class
+Since Java 9 the single character _ is an invalid name for a variable, but _a and __ (double _ ) are legal names.
+
+Naming conventions for variables
+Also, there are the following conventions for naming variables:
+
+if a variable name is a single word it should be in lowercase (for instance: number, price);
+if a variable name includes multiple words it should be in lowerCamelCase, i.e. the first word should be in lowercase and each word after the first should have its first letter written in uppercase (for instance: numberOfCoins);
+variable names should not start with _ and $ characters, although they are allowed;
+choose a name that makes sense, e.g. score makes more sense than s, although they are both valid.
+These conventions are optional, but it is strongly recommended to follow them. As we mentioned at the beginning of this lesson, they make your code more readable for you and other Java programmers.
