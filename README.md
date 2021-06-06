@@ -531,3 +531,492 @@ if a variable name includes multiple words it should be in lowerCamelCase, i.e. 
 variable names should not start with _ and $ characters, although they are allowed;
 choose a name that makes sense, e.g. score makes more sense than s, although they are both valid.
 These conventions are optional, but it is strongly recommended to follow them. As we mentioned at the beginning of this lesson, they make your code more readable for you and other Java programmers.
+
+<!----------Theory: Scanning the input-----------!>
+The standard input is a stream of data going into a program. It is supported by the operating system. By default, the standard input obtains data from the keyboard input but it's possible to redirect it from a file.
+
+Actually, not all programs need to use the standard input. But we will often use it here to help you master your programming skills! The typical way to solve programming problems is the following:
+
+Read data from the standard input (System.in);
+Process data to obtain a result;
+Output the result to the standard output (System.out).
+This type of code challenge can be easily tested by different formats of input data, and for this reason, we will use them a lot.
+
+Reading data with a scanner
+The simplest way to obtain data from the standard input is to use the standard class Scanner. It allows a program to read values of different types (string, numbers, etc) from the standard input. In this topic, we will consider reading data from the input.
+
+To use this class you should add the following import statement to the top of your file with the source code.
+
+import java.util.Scanner;
+Then you add the following construction after the import:
+
+Scanner scanner = new Scanner(System.in);
+With this line, we create an object of Scanner class, that enables us to use its methods. We will learn more about creating objects in other topics. System.in indicates that the program will read text that you type in the standard input. For now, you will always require this line exactly.
+
+There are two ways to read strings with a Scanner class. If your input is an integer number or a single word, you can read the data using next() method. As an example, the following code fragment reads the user’s name and prints hello message:
+
+String name = scanner.next();
+
+System.out.println("Hello, " + name + "!");
+For instance, the user's name is James. The output of the program will be the following:
+
+Hello, James!
+If the user's input is an integer number like 123, the program will output this number. Note that the next() method will store 123 or another integer number as a string, even if we know that this string consists of a number.
+
+Hello, 123!
+There are more specialized methods for reading other types of input values. In this topic, we only consider reading strings.
+But, if the user prints a compound name like Erich Maria, the program will output only the first word:
+
+Hello, Erich!
+In this case, you'll need another method, a nextLine() method, which reads and outputs the whole line:
+
+Hello, Erich Maria!
+As you may notice, the next() method reads one word only and doesn't include any whitespace. By contrast, the nextLine() method includes all space characters it encounters.
+
+Note that in Java whitespace includes not only the space character, but mostly everything that looks empty when printed: a tab, the newline character, and other non-printing characters.
+In this article, we are dealing with space and newline characters: technically, we produce a corresponding character when pressing Enter and starting a new line. The term "whitespace" is used to refer to either of them. The more correct term to refer to what we’ve called “word” is token: it is a piece of text surrounded by whitespace. We can say now that the next() method finds and returns the next token, while the nextLine() reads all data till the end of the current line.
+
+Now you can read a whole word and even a whole line invoking these two methods. To invoke both of them correctly, it is important to know the difference between them.
+
+Reading a multiline input
+Reading multiline input may still be a bit tricky: you should take into account the position of the cursor and the reading methods behavior.
+
+Let’s investigate this process with an example:
+
+|This is a simple
+
+multiline input,
+
+that is being read
+| is a position of the cursor before reading the input.
+
+If we invoke the next() method, the program will read the input till the whitespace, as indicated by the color blue:
+
+This| is a simple
+
+multiline input,
+
+that is being read
+After invoking the nextLine() method the program reads the whole line starting from the whitespace. This data is indicated by a green color. The nextLine() places the cursor at the beginning of a new line (if there is such a line in your input):
+
+This is a simple
+
+|multiline input,
+
+that is being read
+Then, let's invoke the next() method two times. The first input is indicated by an orange color. You may see that the position of the cursor is right after the word and before the whitespace:
+
+This is a simple
+
+multiline| input,
+
+that is being read
+Now we invoke the next() method again. The program outputs the second word in the line without whitespace. It doesn't even matter how many space characters are there, because the next() method will skip the whitespace until it finds the next token.
+
+The second input is indicated by light blue color. As you may see, the position of the cursor is still at the current line right before the new line and after the comma:
+
+This is a simple
+
+multiline input,|
+
+that is being read
+Here is a tricky thing about the nextLine() method that also shows a major difference between the next() and the nextLine() methods. As you already know, the program will read input from the position of the cursor till the new line (again, if there is such a line in your input). In this example the cursor is located before the new line: thus, the nextLine() method will return an empty line ("") and place the cursor at the beginning of a new line.
+
+This is a simple
+
+multiline input,
+
+|that is being read
+To sum up, let's look at the code as a whole and consider the variables we have just read:
+
+import java.util.Scanner; 
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);  
+
+        String word1 = scanner.next(); // "This"
+        String line1 = scanner.nextLine(); // " is a simple" 
+        String word2 = scanner.next(); // "multiline"
+        String word3 = scanner.next(); // "input,"
+        String line2 = scanner.nextLine(); // "" 
+        
+    }
+}
+This example may seem artificial, but it should help you to catch the difference between these two methods. Remember that usually the variables are named in a more expressive way.
+
+Conclusion
+We can read data from the standard input with a special Scanner class. The next() and the nextLine() methods will help you to read strings. Both of them are used for getting input, but they act differently. The next() method can read the input only till the whitespace while the nextLine() method reads the input till the end of the whole line.
+
+We recommend you to use the class Scanner when solving programming problems. It is one of the simplest ways to get values from the standard input. More complex ways to read data will be discussed in further topics.
+
+<!--------  Theory: Arithmetic operations ----------!>
+In real life, we often perform arithmetic operations. They help us to determine the change from a purchase, calculate the area of a room, count the number of people in a queue, and so on. The same operations are used in programs.
+
+Binary arithmetic operators
+The Java programming language provides operators to perform arithmetic operations:
+
+addition +
+subtraction -
+multiplication *
+integer division /
+remainder %
+The operators are called binary because they take two values as operands.
+
+The following example prints results of addition, subtraction, and multiplication.
+
+System.out.println(13 + 25); // prints 38
+System.out.println(20 + 70); // prints 90
+
+System.out.println(70 - 30); // prints 40
+System.out.println(30 - 70); // prints -40
+
+System.out.println(21 * 3);  // prints 63
+System.out.println(20 * 10); // prints 200
+The / operator returns the integer part of the division of two integer numbers, and any fractional part is discarded.
+
+System.out.println(8 / 3); // prints 2
+System.out.println(41 / 5); // prints 8
+The % in Java is the modulus or remainder operator. It returns the remainder of the division of two numbers. Note, that when the dividend is less than the divisor, the quotient is zero and the remainder equals the dividend. If you still feel uneasy about modulo operation, check out the wiki.
+
+System.out.println(10 % 3) // prints 1, because 10 divided by 3 leaves a remainder of 1
+System.out.println(12 % 4) // prints 0, because 12 divided by 4 leaves no remainder
+System.out.println(5 % 9) // prints 5, because 5 divided by 9 leaves a remainder of 5
+Writing complex expressions
+The operations can be combined to write more complex expressions:
+
+System.out.println(1 + 3 * 4 - 2); // prints 11
+The calculation order coincides with arithmetic rules. Multiplication has a higher priority level than addition and subtraction, so the operation 3 * 4 is calculated first.
+
+To specify the order of execution we can use parentheses as in the following:
+
+System.out.println((1 + 3) * (4 - 2)); // prints 8
+As in arithmetic, parentheses can be nested. You can also use them for clarity.
+
+Unary operators
+A unary operator takes a single value as the operand.
+
+The unary plus operator indicates a positive value. It's an optional operator.
+System.out.println(+5); // prints 5
+The unary minus operator negates a value or an expression.
+System.out.println(-8);  // prints -8
+System.out.println(-(100 + 4)); // prints -104
+They both have a higher level of precedence than the multiplication and division operators.
+
+The precedence order
+There is a precedence order of all arithmetic operators, including parentheses. The list below is sorted from the highest to the lowest precedence level.
+
+parentheses
+unary plus/minus
+multiplication, division
+addition, subtraction
+<!----------- Theory: Integer types and operations-----------!>
+Basic information about integer types
+Java provides several types which represent integer numbers including positive, negative and zero. In practice, the most used types are int and long. The first type can store numbers from a smaller range than the second one, but it is often enough (especially, in this topic). You can perform all arithmetic operations (+, -, *, /, %) with variables of integer types.
+
+Let's look at some examples below.
+
+int two = 2;
+int ten = 10;
+
+int twelve = two + ten; // 12
+int eight = ten - two;  // 8
+int twenty = two * ten; // 20
+int five = ten / two;   // 5
+int zero = ten % two;   // 0, no remainder
+
+int minusTwo = -two; // -2
+This code demonstrates how to assign values to int variables as well as how to perform arithmetic operations with them. We hope that you already understand all operations well.
+
+To improve the readability of your code, the special underscore character _ can be used to separate groups of digits within a number.
+
+int million = 1_000_000;
+You may also print a value of an int variable:
+
+int number = 100;
+System.out.println(number); // 100
+All arithmetic operations work with the long type as well.
+
+long one = 1L;
+long twentyTwo = 22L; // L or l is a literal for longs
+long bigNumber = 100_000_000_000L;
+
+long result = bigNumber + twentyTwo - one; 
+System.out.println(result); // 100000000021
+If a number ends with the letter L or l it is considered as long, otherwise, it is int. We recommended you to use the uppercase letter L because the lower case letter l is very similar to the digit 1.
+
+Note, use long's numbers only if it is really necessary (to process big values)
+The forms of the assignment operator
+Suppose, you want to add some value to a variable. You may write something like this:
+
+int n = 10;
+n = n + 4; // 14
+The assignment operator = has several forms which combine it with an operation to avoid repeating the variable twice:
+
+int n = 10;
+n += 4; // 14
+As you may see, this form looks more concise. There are a few other possible forms *=, /=, %= and some others.
+
+Reading numbers from the standard input
+As a rule, to solve a problem you need to read some data from the outside world, process it, and output the result. The following program reads two numbers from the standard input, adds them, and prints the sum.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        int sum = a + b;
+
+        System.out.println(sum);
+    }
+}
+This simple code uses Scanner to read data.
+
+If we know that the input numbers can be quite large, we can read long's instead of int's:
+
+long a = scanner.nextLong();
+long b = scanner.nextLong();
+
+long sum = a + b;
+No more lines need to be changed in this code.
+
+Now you have enough knowledge to write useful programs that process data. You may use the template above for solving code challenges in this lesson. Try to give meaningful names to variables when solving problems.
+
+Para obtener el siguiente numero par al numero ingresado por teclado
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        a += 2 - (a % 2);
+        System.out.println(a);
+    }
+}
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input1 = scanner.nextInt();
+        System.out.println(input1 + 2 - input1 % 2);
+    }
+}
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+        int given = scanner.nextInt();
+        if (0 == given % 2) {
+            System.out.println(given + 2);
+        } else {
+            System.out.println(given + 1);
+        }
+    }
+}
+
+<!--------- Theory: Units of information ----------!>
+Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!
+
+Each measurement requires an instrument and its own unit of measurement. For example, bodyweight is measured with scales in kilograms (or pounds), time is measured with clocks in seconds, etc. But how does one measure information?
+
+Bit: the smallest unit of information
+The information entered into the computer should be specific and unambiguous. For a long time, people have used ciphers. The simplest and most convenient of them were digital. Any information from the names of flowers to the days of the week can be presented in the form of numbers. When processed with a conventional computer, the data is encoded by numbers. They are represented by the electrical signals that the computer works with. For the convenience of distinguishing, signals of two levels are used in classical electronic computers. One of them corresponds to the number 1, and the other to 0. Any letter, sound, or image on a computer is represented by a set of numbers. The numbers 1 and 0 are called binary. These are the symbols that make up the language understood and used by the computer. Any information on the computer is represented by binary digits: 1, meaning "there is a signal" and 0, meaning "no signal".
+
+The smallest unit of information is the bit (b).
+Each digit of the machine binary code carries the amount of information equal to one bit. It can take only one of two values: either 1 or 0. It is very inconvenient to measure information in bits because the numbers come out too big.
+
+Byte: a sequence of eight bits
+Since people do not consider the mass of ships in grams, larger and hence more convenient units were invented for measuring information as well.
+
+The processing of information takes place in the processor. This is a device that can work with several bits at once (8, 16, 32, 64, ...). The more bits of information are processed simultaneously, the faster the computer operation is. The first computers processed 8 bits of information simultaneously, so we needed a new unit of measurement which was called a byte (B) that means 8 bits.
+
+Bit marks are easily confused with byte marks. Note that the abbreviations for bit numbers uses the lowercase letter "b", while bytes are denoted using the capital "B".
+Large units of information
+There are larger units of information since modern computers process huge amounts of information significantly exceeding bytes.
+
+The computer industry has historically used the units kilobyte, megabyte, and gigabyte in at least two slightly different measurement systems which are slightly contradictory to each other.
+
+The first one is a decimal-based system, which uses bytes in the powers of ten: kilobyte (10^3 bytes), megabyte (10^6 bytes), and gigabyte (10^9 bytes) and so on. These units are used by the International System of Units (SI).
+The second one is a binary-based system which uses bytes in the powers of two: kilobyte (2^10 bytes), megabyte (2^20 bytes), gigabyte (2^30 bytes) and so on. This system was actively used to describe computer memory.
+To resolve this confusion, the International Electrotechnical Commission (IEC) suggested to use prefixes kilo, mega and giga only for the decimal-based system and to use new prefixes kibi, mebi, gibi for the binary-based system. Here bi means binary: kibibyte is kilo binary byte.
+
+Here is a table with commonly used units of information according to the modern international standards.
+
+SI metric	Symbol	Powers of ten	IEC metric	Symbol	Powers of two
+Kilobyte	kB	10^3 B (1000 B)	Kibibyte	KiB	2^10 B (or 1024 B)
+Megabyte	MB	10^6 B (1000 kB)	Mebibyte	MiB	2^20 B (or 1024 KiB)
+Gigabyte	GB	10^9 B (1000 MB)	Gibibyte	GiB	2^30 B (or 1024 MiB)
+Terabyte	TB	10^12 B (1000 GB)	Tebibyte	TiB	2^40 B (or 1024 GiB)
+Petabyte	PB	10^15 B (1000 TB)	Pebibyte	PiB	2^50 B (or 1024 TiB)
+Of course, not all units of measurement are listed here. We hope, this classification will not cause you any difficulties. It is good that a byte is always 8 bit :) But even this did not come immediately.
+
+Note that some people and organizations still prefer kilo, mega, and giga to describe powers of two. In this course, we follow the recommendations of the IEC and use modern prefixes kibi, mebi, and gibi.
+Measurement units conversion
+To strengthen your newly obtained knowledge, let's look at the solution of a rather typical problem where you need to convert 1 GiB to KiB. When we convert bigger units into smaller ones, we need to resort to an arithmetic operation called multiplication:
+
+1 GiB = 1 * 1024 * 1024 = 1048576 KiB
+Accordingly, when you need to convert small units into big ones, you use division. Let's try to convert 16384 bits to KiB:
+
+16384 bits = (16384 / 8) / 1024 = 2 KiB
+If you want to convert 1 GB to kB, you should multiply the number by a thousand twice:
+
+1 GB = 1 * 1000 * 1000 = 1000000 kB
+Congratulations, now you have studied one of the basic topics of computer science and are ready to storm new dizzying heights of knowledge.
+
+<!----------- Theory: Sizes and ranges-------------!>
+In this lesson, we will discuss the classification and properties of primitive types provided by Java. Maybe you already know a few of them. The basic types can be separated into several groups according to meaning. Types from the same group can be operated in the same way, but have different sizes and, as consequence, represent different ranges of values.
+
+You do not need to know all this information by heart, because it is easy to find it in the documentation or simply Google it. But a common understanding of these concepts is important in job interviews and practice.
+
+Numbers
+Java provides several types for integers and fractional numbers. These types are often used in arithmetic expressions.
+
+Integer numbers (0, 1, 2, ...) are represented by the following four types: long,int,short,byte(from the largest to the smallest). These types have different sizes and may represent different ranges of values. The range of an integer type is calculated as −(2n−1) to (2n−1)−1, where n is the number of bits. The range includes 0, which is the reason for subtracting 1 from the upper bound.
+
+byte: size 8 bits (1 byte), range from -128 to 127
+short: size 16 bits (2 bytes), range from -32768 to 32767
+int: size 32 bits (4 bytes), range from −(231) to (231)−1
+long: size 64 bits (8 bytes), range from −(263) to (263)−1
+The sizes of types are always the same. They do not depend on the operating system or hardware and cannot be changed.
+
+The most commonly used integer types are int and long. Try to use int if it is enough for your purposes. Otherwise, use long.
+
+int one = 1;
+long million = 1_000_000L;
+Floating-point types represent numbers with fractional parts. Java has two such types: double (64 bits) and float (32 bits). These types can store only a limited number of significant decimal digits (~6-7 for float and ~14-16 for double). Usually, you will use the double type in practice.
+
+double pi = 3.1415;
+float e = 2.71828f;
+Note, that when we declare and initialize a float variable, we should mark the assigned value with the special letter f. It is often a good practice to mark a long value with L as well. We will learn more about numeric literals later.
+Characters
+Java has a type named char to represent letters (uppercase and lowercase), digits, and other symbols. Each character is just a single letter enclosed in single quotes. This type has the same size as the short type (2 bytes = 16 bits).
+
+char lowerCaseLetter = 'a';
+char upperCaseLetter = 'Q';
+char dollar = '$';
+Characters represent symbols from many alphabets including hieroglyphs, as well as some special symbols which will be studied in the following lessons.
+
+Booleans
+Java provides a type called boolean, which can store only two values: true and false. It represents only one bit of information, but its size is not precisely defined.
+
+boolean enabled = true;
+boolean bugFound = false;
+We will often use this type in conditionals and as a result of comparing two numbers.
+
+As a recap, we note that the types used most often are int, long, boolean, char, and double. Also, remember that long is the widest integer type. Knowledge of sizes and ranges of data types may help you with interviews.
+Choose the correct formula for calculating the upper (max) possible value of an int variable.
+
+a) 2^(n−1) − 1, where n is the number of bytes
+b) 2^(n−1) + 1, where n is the number of bytes
+c) 2^n + 1, where n is the number of bytes
+d) 2^(n−1) − 1, where n is the number of bits//correcta
+e) 2^(n−1) + 1, where n is the number of bits
+f) 2^n + 1, where n is the number of bits
+
+<!-------- Theory: Type casting   --------!>
+Suppose, you need to assign a value of one type to a variable of another type. To do that, your program needs to cast the source type to the target type. Java provides two kinds of casting for primitive types: implicit and explicit. The first one is performed automatically by the java compiler when it is possible, and the second one – only by a programmer.
+
+Implicit casting
+The compiler automatically performs implicit casting when the target type is wider than the source type. The picture below illustrates the direction of this casting. Any value of a given type can be assigned to the one on the right implicitly.
+
+                    char
+//byte ---> short ---> int --->long --->float --->double
+Boolean -> Char -> Byte -> Short -> Int -> Long -> Float -> Double
+
+*/The direction of implicit primitive type castings
+
+Normally, there is no loss of information when the target type is wider than the source type, for example when we cast int to long. But it is not possible to automatically cast in the backward order (e.g. from long to int or from double to float).
+
+Note, there is no boolean type on the picture above, because it is impossible to cast this type to any other and vice versa.
+Here are several examples of implicit castings:
+
+from int to long:
+int num = 100;
+long bigNum = num; // 100L
+from long to double:
+long bigNum = 100_000_000L;
+double bigFraction = bigNum; // 100000000.0
+from short to int:
+short shortNum = 100;
+int num = shortNum; // 100
+from char to int:
+char ch = '?';
+int code = ch; // 63
+In some cases, implicit type casting may be a bit lossy. When we convert an int to float, or a long to float or to double, we may lose some less significant bits of the value, which will result in a loss of precision. However, the result of this conversion will be a correctly rounded version of the integer value, which will be in the overall range of the target type. To understand that, check out the example:
+
+long bigLong =  1_200_000_002L;
+float bigFloat = bigLong; // 1.2E9 (= 1_200_000_000)
+When we convert a char to an int in Java we actually get the ASCII value for a given character. ASCII value is an integer representation of English alphabet letters (both uppercase and lowercase), digits, and other symbols. Here you can find some of the standard symbols in ASCII.
+
+char character = 'a';
+char upperCase = 'A';
+
+int ascii1 = character; // this is 97
+int ascii2 = upperCase; // this is 65
+Strictly speaking, Java uses Unicode Character Representations (UTF-16), which is a superset of ASCII and includes a by far larger set of symbols. However, the numbers 0–127 have the same values in ASCII and Unicode.
+As you can see, implicit casting works absolutely transparently.
+
+Explicit casting
+The considered implicit casting does not work when the target type is narrower than the source type. But programmers can apply explicit casting to a source type to get another type they want. It may lose information about the overall magnitude of a numeric value and may also lose precision.
+
+To perform explicit casting, a programmer must write the target type in parentheses before the source.
+
+(targetType) source
+Any possible casting not presented in the picture above needs such an approach, for example double to int, and long to char.
+
+Examples:
+
+double d = 2.00003;
+
+// it loses the fractional part
+long l =  (long) d; // 2
+
+// requires explicit casting because long is wider than int
+int i = (int) l; // 2 
+
+// requires explicit casting because the result is long (indicated by L)
+int val = (int) (3 + 2L); // 5
+
+// casting from a long literal to char
+char ch = (char) 55L; // '7'
+However, the explicit casting may truncate the value, because long and double can store a much larger number than int.
+
+long bigNum = 100_000_000_000_000L;
+int n = (int) bigNum; // 276447232
+Oops! The value has been truncated. This problem is known as type overflow. The same problem may occur when casting int to short or byte. Let's see what happens exactly.
+
+As you remember, in Java long is a 64-bit number, while int is 32-bit. When converting long to int the program just takes the last 32 bits to represent the new number. If the long contains a number less than or equal to Integer.MAX_VALUE you can convert it by casting without losing information. Otherwise, the result will be quite meaningless, although determined. That is why you shouldn't perform casting from a larger type to a smaller type unless you are absolutely sure that it is necessary, and that truncation will not interfere with your program.
+
+Explicit casting also works when implicit casting is enough.
+
+int num = 10;
+long bigNum = (long) num; // redundant casting
+But this is redundant and should not be used to avoid unnecessary constructs in your code.
+
+Note, that despite the power of explicit casting, it is still impossible to cast something to and from the boolean type.
+Conclusion
+If you want to cast a narrower type to a wider type, you do not need to write anything, the Java compiler will do it automatically for you. But if you want the opposite, specify the required type in parentheses following the assignment operator. Keep in mind, the boolean type cannot be cast to another type and vice versa.
+float f = 20d + 20.02f; // 1 CAST AS FLOAT
+long n = 10 + 2L;       // 2
+byte b = n + 5;         // 3 CAST AS BYTE
+
+long lo = Integer.MAX_VALUE; // (1)
+int i = lo; // (2)   CASTEAR
+char ch = i; // (3)  CASTEAR
+double d = ch; // (4)
+float f = d; // (5)  CASTEAR
+CASTEO EXPLICITO REQUERIDO
+int q = 'q';  // 1
+char ch2 = q; // 2  SI
+short s = 1;  // 3
+char ch3 = s; // 4  SI
