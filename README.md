@@ -1,34 +1,34 @@
 # jetbrains
-practicas de java
-// Learn Java while building real functional applications. You'll get to choose a project that suits your level and will get all the necessary knowledge to complete it. Completing the full track will prepare you to deal with various tasks related to desktop application or web development in Java. While progressing through different projects of this track you can learn to:
-// Understand the syntax of Java and write well readable and efficient code
-// Work with professional development tools and GitHub
-// Apply the principles of object-oriented programming widely used in commercial development
-// Simplify your application design with functional programming
-// Use collections to effectively process data in your application
-// Use multicore processing to optimize the speed of your app
-// Use the Swing library for desktop development
-// Build an efficient web application with SpringBoot
-// Work with data formats like JSON and XML
-// Work with databases
+Practicas de java: Curso de JAVA en ingles y posteriormente traducido por mi.
+ Learn Java while building real functional applications. You'll get to choose a project that suits your level and will get all the necessary knowledge to complete it. Completing the full track will prepare you to deal with various tasks related to desktop application or web development in Java. While progressing through different projects of this track you can learn to:
+Understand the syntax of Java and write well readable and efficient code.
+Work with professional development tools and GitHub.
+Apply the principles of object-oriented programming widely used in commercial development.
+Simplify your application design with functional programming.
+Use collections to effectively process data in your application.
+Use multicore processing to optimize the speed of your app.
+Use the Swing library for desktop development.
+Build an efficient web application with SpringBoot.
+Work with data formats like JSON and XML.
+Work with databases.
+Aprende Java mientras construyes aplicaciones reales funcionales. Puedes elegir un proyecto de acuerdo a tu nivel y tendras todo el conocimiento para completarlo. Completar el camino completo te preparará para manejar tareas varias relacionadas a aplicaciones de escritorio o desarrollo web en Java. Mientras progresas a través de diferentes proyectos de este camino aprenderas: a entender la sintaxis en Java y escribir un codigo eficiente y leible; a trabajar con herraminetas profesionales de desarrollo y GitHub; a aplicar los principios de programacion orientada a objetos usada en desarrollo comercial; a simplificar el diseño de tu aplicacion con programcion funcional; a usar procesamiento multinucleo para optimizar la velocidad de tu app; a usar la libreria swing para desarrollo de escritorio; a crear una aplicacion web eficiente con springboot; a trabajar con formatos de data como JSONy XML; y a trabajar con bases de datos. 
 
+Project: Simple Tic-Tac-Toe
+About:
+Everybody remembers this paper-and-pencil game from childhood: Tic-Tac-Toe, also known as Noughts and crosses or Xs and Os. A single mistake usually costs you the game, but thankfully it is simple enough that most players discover the best strategy quickly. Let’s program Tic-Tac-Toe and get playing!
 
-// Project: Simple Tic-Tac-Toe
-// About
-// Everybody remembers this paper-and-pencil game from childhood: Tic-Tac-Toe, also known as Noughts and crosses or Xs and Os. A single mistake usually costs you the game, but thankfully it is simple enough that most players discover the best strategy quickly. Let’s program Tic-Tac-Toe and get playing!
+primer desafio:
+You have a guest list of the people who registered their stay at the hotel. There are 4 rooms in the hotel: 1 single room, 2 double rooms and 1 family room for three guests. The guest list consists of 4 lines. Each line contains the name or the names of the guests registered together in one room.
 
-// primer desafio:
-// You have a guest list of the people who registered their stay at the hotel. There are 4 rooms in the hotel: 1 single room, 2 double rooms and 1 family room for three guests. The guest list consists of 4 lines. Each line contains the name or the names of the guests registered together in one room.
+Read the names of the registered guests from the list and output each name in a separate line and in reverse order starting with the last registered guest. Note that the order of the guests registered in each room is undefined.
 
-// Read the names of the registered guests from the list and output each name in a separate line and in reverse order starting with the last registered guest. Note that the order of the guests registered in each room is undefined.
+Sample Input 1:
 
-// Sample Input 1:
-
-// Jane Kate
-// John
-// Mary Susan Paul
-// Boris Ann
-// Sample Output 1:
+Jane Kate
+John
+Mary Susan Paul
+Boris Ann
+Sample Output 1:
 
 // Ann
 // Boris
@@ -1020,3 +1020,246 @@ int q = 'q';  // 1
 char ch2 = q; // 2  SI
 short s = 1;  // 3
 char ch3 = s; // 4  SI
+<----------STAGE 1 COMPLETADO ------------>
+Description
+Our program should be able to display the grid at all stages of the game. Now we’re going to write a program that allows the user to enter a string representing the game state and correctly prints the 3x3 game grid based on this input. We’ll also add some boundaries around the game grid.
+
+Objectives
+In this stage, you will write a program that:
+
+Reads a string of 9 symbols from the input and displays them to the user in a 3x3 grid. The grid can contain only X, O and _ symbols.
+Outputs a line of dashes --------- above and below the grid, adds a pipe | symbol to the beginning and end of each line of the grid, and adds a space between all characters in the grid.
+Examples
+Examples below show how your output should look.
+Notice that after Enter cells: comes the user input.
+
+Example 1:
+
+Enter cells: O_OXXO_XX
+---------
+| O _ O |
+| X X O |
+| _ X X |
+---------
+Example 2:
+
+Enter cells: OXO__X_OX
+---------
+| O X O |
+| _ _ X |
+| _ O X |
+---------
+Example 3:
+
+Enter cells: _XO__X___
+---------
+| _ X O |
+| _ _ X |
+| _ _ _ |
+---------
+<!------ Theory: Increment and decrement---------!>
+In this topic, we will discuss one of the most famous operations in programming: increment. It is used in many programming languages including Java to increase a variable by one. Fun fact: this operation is used in the name of C++, and signifies the evolutionary nature of the changes from C.
+
+Using ++ and -- in Java
+Java has two opposite operations called increment (++) and decrement (--) to increase/decrease the value of a variable by one.
+
+int n = 10;
+n++; // 11
+n--; // 10
+The code above is actually the same as below.
+
+int n = 10;
+n += 1; // 11
+n -= 1; // 10
+Prefix and postfix forms
+Both increment and decrement operators have two forms which are very important when using the result in the current statement:
+
+prefix (++n or --n) increases/decreases the value of a variable before it is used;
+postfix (n++ or n--) increases/decreases the value of a variable after it is used.
+The following examples demonstrate both forms of increment.
+
+Prefix increment:
+
+int a = 4;
+int b = ++a;
+
+System.out.println(a); // 5
+System.out.println(b); // 5
+In this case, the value of a has been incremented and then assigned to b. So, b is 5.
+
+Postfix increment:
+
+int a = 4;
+int b = a++;
+
+System.out.println(a); // 5
+System.out.println(b); // 4
+In Java, the postfix operator has higher precedence than the assignment operator. However, it returns the original value of a, not the incremented one. That's why when we assign a++ to b, we actually assign 4, while a itself has already been incremented. So, b is 4 and a is 5.
+
+If that's still not clear enough for you, take a look at the code:
+
+int a = 4;
+System.out.println(a++ + a); // this is 9
+We hope that now you fully understand increment and decrement and their prefix and postfix forms.
+el preincremento agrega primero y luego asigna la variable. El postincremento asigna el valor y luego aumenta el valor
+int a = 4;
+int b = a++;
+
+System.out.println(a); // 5
+System.out.println(b); // 4
+RESPUESTA A:
+int a = -1;
+System.out.println(1 - a++);    2
+
+int a = 2;
+int b = 3;
+int c = ++a + b--;  6
+
+int n = 10;
+n--;
+System.out.println(n++); 9
+
+<!------- Theory: Characters ---------!>
+The char type is used to represent letters (both uppercase and lowercase), digits, and other symbols. Each character is just a symbol enclosed in single quotes.
+
+char lowerCaseLetter = 'a';
+char upperCaseLetter = 'Q';
+char number = '1';
+char space = ' ';
+char dollar = '$';
+This type can represent all characters in all languages as well as some special and computer symbols. It corresponds to the Unicode (UTF-16) format. Unicode is a computer encoding methodology that assigns a unique number for every character. It doesn't matter what language, or computer platform it's on. This is important in a global, networked world, and for computer systems that must accommodate multiple languages and special characters. Unicode truly unifies all of these into a single standard.
+
+Initializing characters with codes
+A character can be also created using its hexadecimal code in the Unicode table. The code starts with \u.
+
+char ch = '\u0040'; // it represents '@'
+System.out.println(ch); // @
+Although we use a sequence of characters to represent such code, the code represents exactly one character.
+
+As an example, Latin capital letters have hexadecimal codes from '\u0041' to '\u005A', and Latin small letters have codes from '\u0061' to '\u007A'.
+
+The char type has a minimum value encoded as '\u0000' and the maximum value encoded as '\uffff'.
+
+It is also possible to initialize a char with a positive integer number.
+
+char ch = 64;
+System.out.println(ch); // @
+The number 64 just corresponds to the Unicode hexadecimal code '\u0040'.
+
+Any char variable may be considered as an unsigned integer value in the range from 0 to 65535.
+
+Retrieving subsequent characters
+There are two operators for adding (+) and subtracting (-) integer numbers in order to get the next and previous character according to the Unicode order.
+
+char ch = 'b';
+ch += 1; // 'c'
+ch -= 2; // 'a'
+It is also possible adding and subtracting one character to / from another one.
+
+char ch = 'b';
+ch += 'a';
+ch -= 'b';
+System.out.println(ch); // prints 'a' without quotes
+Actually, these operations manipulate with codes of characters, 'b' has the next code after 'a'.
+
+It is possible to use increment (++) and decrement (--) operators in prefix and postfix forms.
+
+char ch = 'A';
+ch += 10;
+System.out.println(ch);   // 'K'
+System.out.println(++ch); // 'L'
+System.out.println(++ch); // 'M'
+System.out.println(--ch); // 'L'
+Escape sequences
+There are some special characters starting with backslash \ which are known as the escape or control sequences. They do not have corresponding symbols and cannot be found on a keyboard. To represent such characters we use a pair of regular symbols. In a program, this pair will be considered as exactly one character with the appropriate code.
+
+'\n' is the newline character;
+'\t' is the tab character;
+'\r' is the carriage return character;
+'\\' is the backslash character itself;
+'\'' is the single quote mark;
+'\"' is the double quote mark.
+Here are several examples:
+
+System.out.print('\t'); // makes a tab
+System.out.print('a');  // prints 'a'
+System.out.print('\n'); // goes to the new line
+System.out.print('c');  // prints 'c'
+This code prints:
+
+  a
+c
+There is also a character to represent a single space ' '. It is just a regular character, not an escape sequence.
+
+char c = '1' + '3';
+System.out.println(c); 4
+
+int z = 'z'; 
+char mystery = z - 10; 
+System.out.println(mystery); COMPILE ERROR
+
+char ch = '\u0031' + '\u0035';
+System.out.println(ch); F
+
+<!----- Theory: Calling a method ------!>
+You may remember that a method is a sequence of statements that can be invoked or referred to by its name. Nothing special, huh? But what if we tell you that you can use it in a program anytime you need and anywhere you want just by simply invoking it with one line of code? Hope that we caught your attention now!
+
+To get started, we will call some method:
+
+getVolume(a, b, h);
+Here, getVolume is the name of the method that, for example, calculates a volume of some geometric shape, and the variables a, b and h are its parameters. Technically, the parameter of a method is some value that is used inside the method. The combination of the name and method's parameters in parentheses is the way we call or invoke the method. Let's focus on it in more detail.
+
+Name of the method
+Each method has a name that is used to call it. Generally, it reflects what the method does – prints, finds, calculates, provides you with some information.
+
+The Java compiler requires a method name to be a legal identifier. The rules for legal identifiers are the following:
+
+identifiers are case-sensitive;
+an identifier can include Unicode letters, digits, underscore _ or currency characters, such as $;
+an identifier can't start with a digit;
+identifiers must not be a keyword.
+In addition, there is a naming convention that restricts possible method names. It's optional but desired for developers. By convention, a one-word name should be a verb in lowercase: sum, multiply, or round.
+
+If a method has a multi-word name, the first letter of the second and the following words should be capitalized: getValue, calculateNumberOfOranges, or findLetter.
+
+OK, now we know how methods are named. Let's talk about how we actually call them!
+
+Calling a method
+If you want to call (or invoke) a method in your program, you should write its name and pass the values of its parameters in parentheses. Here's how it can be done:
+
+printNumber(7); // this method prints 7
+
+convertDoubleToInt(1.25) // this method converts double value to int
+
+findUserByName("Kate"); // this method finds a user whose name is Kate
+Let's take a look at the findUserByName example.
+
+Here we pass a String value with a name to make the findUserByName do its job. To call a method from outside the class it belongs to you need to indicate a class as a prefix. Check these methods:
+
+Math.round(79.378); // method with Math class name
+Character.isLetter('a'); // method with Character class name
+Let's try to perform a small task by invoking a method:
+
+double weight = 63.85;
+weight = Math.round(weight); // now weight equals 64.0
+Here, we have methods that take parameters, but what if we tell you that some methods don't accept parameters at all? In that case, just leave the parentheses empty.
+
+Some methods are called in a slightly different way. Take a look:
+
+// this is how you call an instance method
+
+String name = new String("Anya"); // created an instance (1)
+name = name.toLowerCase() // anya (2)
+Methods like this require an object of a certain class to be invoked. Before we called the toLowerCase() method, we created an object of the String class called name, since the method in question deals with strings. Now we can call the method for this particular instance (2), which results in decapitalizing all the letters from our string.
+
+As you see, this method requires an instance to be created before it can be called, that's why it is known as an instance method. We will talk about this type of method later.
+
+Built-in methods
+Why do you need to rewrite algorithms that have already been written? Of course, we're not talking about some special cases like educational tasks. Still, it is more efficient to use pre-defined methods that are always available to the user. That is why there are two types of methods in Java: built-in and user-defined methods.
+
+Built-in methods belong to the Standard Java library. Now there are a lot of built-in methods that convert or compare values, round doubles, find the maximum or the minimum value, and do a lot of useful operations. We've already dealt with the round(), isLetter(), compareTo(), hasNext() methods, but the number of built-in methods is huge and constantly growing. You can find the method you need in the Oracle documentation. For example, check out the link to the Math library.
+
+In contrast to built-in methods, user-defined methods are created by the programmer. It is a common practice to create a customized subprogram for a specific purpose. You may create your own method and even put it in your own class. Later on, we will learn why it is a good practice to use user-defined methods and how to actually create them.
+
+Conclusion
+Generally, a method is a necessary tool for a programmer who is aiming for a neat and reusable code style. With the help of methods, you can perform any specific task you need. They make the program look more readable, and you don't need to repeat routine code lines over and over. Some tasks are wrapped in special built-in methods that are parts of the standard Java library. Also, there are user-defined methods that are created by the programmer. We will discuss these methods in other topics.
