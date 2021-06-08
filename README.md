@@ -1743,3 +1743,105 @@ public class Main {
         return new String(arr);
     }
 }
+- public: anyone can access it
+- static: method can be run without creating an instance of the class containing the main method
+- void: method doesn't return any value
+- main: the name of the method
+You can now read in different kinds of input data that the user enters.
+Here are some methods that are available through the Scanner class:
+Read a byte - nextByte()
+Read a short - nextShort()
+Read an int - nextInt()
+Read a long - nextLong()
+Read a float - nextFloat()
+Read a double - nextDouble()
+Read a boolean - nextBoolean()
+Read a complete line - nextLine()
+Read a word - next()
+Conditional statements are used to perform different actions based on different conditions.
+The if statement is one of the most frequently used conditional statements.
+If the if statement's condition expression evaluates to true, the block of code inside the if statement is executed. If the expression is found to be false, the first set of code after the end of the if statement (after the closing curly brace) is executed.
+Syntax:
+if (condition) {
+   //Executes when the condition is true
+}
+Any of the following comparison operators may be used to form the condition:
+< less than
+> greater than
+!= not equal to
+== equal to
+<= less than or equal to
+>= greater than or equal to
+Any of the following comparison operators may be used to form the condition:
+< less than
+> greater than
+!= not equal to
+== equal to
+<= less than or equal to
+>= greater than or equal to
+Any of the following comparison operators may be used to form the condition:
+< less than
+> greater than
+!= not equal to
+== equal to
+<= less than or equal to
+>= greater than or equal to
+An if statement can be followed by an optional else statement, which executes when the condition evaluates to false.
+You can use one if-else statement inside another if or else statement.
+Instead of using nested if-else statements, you can use the else if statement to check multiple conditions.
+Logical operators are used to combine multiple conditions.
+
+Let's say you wanted your program to output "Welcome!" only when the variable age is greater than 18 and the variable money is greater than 500.
+One way to accomplish this is to use nested if statements
+The OR operator (||) checks if any one of the conditions is true.
+The condition becomes true, if any one of the operands evaluates to true.
+The NOT !) logical operator is used to reverse the logical state of its operand. If a condition is true, the NOT logical operator will make it false.
+A switch statement tests a variable for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case.
+Syntax:
+switch (expression) {
+   case value1 :
+     //Statements
+     break; //optional
+   case value2 :
+     //Statements
+     break; //optional
+    //You can have any number of case statements.
+    default : //Optional
+       //Statements
+}
+- When the variable being switched on is equal to a case, the statements following that case will execute until a break statement is reached.
+- When a break statement is reached, the switch terminates, and the flow of control jumps to the next line after the switch statement.
+- Not every case needs to contain a break. If no break appears, the flow of control will fall through to subsequent cases until a break is reached.
+
+The example below tests day against a set of values and prints a corresponding message.
+A switch statement can have an optional default case.
+The default case can be used for performing a task when none of the cases is matched.
+The switch expression allows multiple comma-separated values per case and returns a value for the whole switch-case block.
+The switch expression makes the switch-case block much shorter and doesn't use a break statement.
+A loop statement allows to repeatedly execute a statement or group of statements.
+while loops:
+A while loop statement repeatedly executes a target statement as long as a given condition is true.
+The while loops check for the condition x > 0. If it evaluates to true, it executes the statements within its body. Then it checks for the statement again and repeats.
+int x = 3;
+while(x>=) {
+System.out.println(x);
+x--;
+}The while loops check for the condition x > 0. If it evaluates to true, it executes the statements within its body. Then it checks for the statement again and repeats.
+When the expression is tested and the result is false, the loop body is skipped and the first statement after the while loop is executed.
+Another loop structure is the for loop. A for loop allows you to efficiently write a loop that needs to execute a specific number of times.
+Syntax: for(initialization; condition; increment/ decrement){
+ statement(S)
+}Initialization: Expression executes only once during the beginning of loop
+Condition: Is evaluated each time the loop iterates. The loop executes the statement repeatedly, until this condition returns false.
+Increment/Decrement: Executes after each iteration of the loop.
+A do...while loop is similar to a while loop, except that a do...while loop is guaranteed to execute at least one time.
+int x = 1;
+do{
+System.out.println(x);
+x++;
+}while(x<5);Notice that the condition appears at the end of the loop, so the statements in the loop execute once before it is tested.
+Even with a false condition, the code will run once.
+Loop control statements:
+The break and continue statements change the loop's execution flow.
+The break statement terminates the loop and transfers execution to the statement immediately following the loop.
+The continue statement causes the loop to skip the remainder of its body and then immediately retest its condition prior to reiterating. In other words, it makes the loop skip to its next iteration.
