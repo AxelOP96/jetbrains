@@ -1845,3 +1845,5 @@ Loop control statements:
 The break and continue statements change the loop's execution flow.
 The break statement terminates the loop and transfers execution to the statement immediately following the loop.
 The continue statement causes the loop to skip the remainder of its body and then immediately retest its condition prior to reiterating. In other words, it makes the loop skip to its next iteration.
+a || b is true if either a or b is true
+(a||b) && c is true if c is true and either a or b is true.
