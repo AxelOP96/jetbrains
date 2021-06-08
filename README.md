@@ -1715,3 +1715,31 @@ Enter cells: _XO__X___
 | _ _ X |
 | _ _ _ |
 ---------
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(sc.next().replace('a', 'b'));
+    }
+}
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        final Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine().trim();
+        System.out.println(getChangedString(a.toCharArray()));
+        sc.close();
+    }
+
+    static String getChangedString(char[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 'a') {
+                arr[i] = 'b';
+            }
+        }
+        return new String(arr);
+    }
+}
