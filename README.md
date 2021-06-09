@@ -1890,3 +1890,254 @@ class Main {
         System.out.println(s3.equals(s4));
     }
 }
+SOLUCION STAGE 2
+package tictactoe;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter cells: ");
+        String cells = reader.next();
+        printCells(cells);
+    }
+
+    public static void printCells(String cells){
+        char[] ch = new char[cells.length()]; // create Chars Array
+        for (int i = 0; i < cells.length(); i++) {
+            ch[i] = cells.charAt(i);          // Put String into Array of chars
+        }
+        System.out.println("---------");
+        int p = 0;
+        for (int i = 0; i < 3; i++){
+            System.out.print("| ");
+            for (int j = 0; j < 3; j++){
+                System.out.print(ch[p]+ " ");
+                p++;
+            }
+            System.out.print("|");
+            System.out.println();
+        }
+        System.out.println("---------");
+    }
+}
+OPCION 2
+package tictactoe;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
+        Scanner scanner= new Scanner(System.in);
+        System.out.print("Enter cells: ");
+        String symbols = scanner.nextLine();
+        System.out.println("---------");
+        System.out.println("| " + symbols.charAt(0) + " " + symbols.charAt(1) + " " + symbols.charAt(2) + " |");
+        System.out.println("| " + symbols.charAt(3) + " " + symbols.charAt(4) + " " + symbols.charAt(5) + " |");
+        System.out.println("| " + symbols.charAt(6) + " " + symbols.charAt(7) + " " + symbols.charAt(8) + " |");
+        System.out.println("---------");    
+    }
+}
+OPCION 3
+package tictactoe;
+
+import java.util.Scanner;
+
+public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Game game = new Game();
+        System.out.print("Enter cells: ");
+        String moves = scanner.next();
+        game.load(moves);
+        game.displayPositions();
+    }
+}
+class Game {
+    private final char[][] positions;
+
+    public Game(){
+        positions = new char[3][3];
+    }
+
+    public void displayPositions(){
+        System.out.println("---------");
+        for (char[] row : positions) {
+            System.out.print("| ");
+            for (char position : row) {
+                System.out.print(position + " ");
+            }
+            System.out.print("|\n");
+        }
+        System.out.println("---------");
+    }
+
+    public void load(String moves) {
+        int k = 0;
+        for (int i = 0; i < positions.length; i++) {
+            for (int j = 0; j < positions[i].length; j++) {
+                positions[i][j] = moves.charAt(k++);
+            }
+        }
+    }
+}
+<!------------ STAGE 3 ----------------!>
+Description
+In this stage, we’re going to analyze the game state to determine if either of the players has already won the game or it is still ongoing, if the game is a draw, or if the user has entered an impossible game state (two winners, or with one player having made too many moves).
+
+Objectives
+In this stage, your program should:
+
+Take a string entered by the user and print the game grid as in the previous stage.
+Analyze the game state and print the result. Possible states:
+Game not finished when neither side has three in a row but the grid still has empty cells.
+Draw when no side has a three in a row and the grid has no empty cells.
+X wins when the grid has three X’s in a row.
+O wins when the grid has three O’s in a row.
+Impossible when the grid has three X’s in a row as well as three O’s in a row, or there are a lot more X's than O's or vice versa (the difference should be 1 or 0; if the difference is 2 or more, then the game state is impossible).
+In this stage, we will assume that either X or O can start the game.
+
+You can choose whether to use a space or underscore _ to print empty cells.
+
+Examples
+The examples below show outputs and analysis results for different game states. Your program should work in the same way.
+
+Notice that after Enter cells: comes the user input.
+
+Example 1:
+
+Enter cells: XXXOO__O_
+---------
+| X X X |
+| O O _ |
+| _ O _ |
+---------
+X wins
+Example 2:
+
+Enter cells: XOXOXOXXO
+---------
+| X O X |
+| O X O |
+| X X O |
+---------
+X wins
+Example 3:
+
+Enter cells: XOOOXOXXO
+---------
+| X O O |
+| O X O |
+| X X O |
+---------
+O wins
+Example 4:
+
+Enter cells: XOXOOXXXO
+---------
+| X O X |
+| O O X |
+| X X O |
+---------
+Draw
+Example 5:
+
+Enter cells: XO_OOX_X_
+---------
+| X O   |
+| O O X |
+|   X   |
+---------
+Game not finished
+Example 6:
+
+Enter cells: XO_XO_XOX
+---------
+| X O _ |
+| X O _ |
+| X O X |
+---------
+Impossible
+Example 7:
+
+Enter cells: _O_X__X_X
+---------
+|   O   |
+| X     |
+| X   X |
+---------
+Impossible
+Example 8:
+
+Enter cells: _OOOO_X_X
+---------
+|   O O |
+| O O   |
+| X   X |
+---------
+Impossible
+<!----------Theory: Boolean and logical operations-------------!>
+Boolean type
+The boolean is a data type that has only two possible values: false and true. This is also known as the logical type.
+
+This type is a common way in programming languages to represent something that has only two opposite states like on or off, yes or no, etc.
+
+
+
+If you are writing an application that keeps track of door's openings you'll find it natural to use boolean to store current door state.
+
+boolean open = true;
+boolean closed = false;
+
+System.out.println(open);   // true
+System.out.println(closed); // false
+
+Important, you cannot assign an integer value to a boolean variable. In Java, 0 is not the same as false.
+Logical operators
+Variables of the boolean type are often used to build logical expressions using logical operators. Java has four logical operators NOT, AND, OR and XOR:
+
+NOT is a unary operator that reverses the boolean value. It is denoted as !.
+boolean f = false; // f is false
+boolean t = !f;    // t is true
+AND is a binary operator that returns true if both operands are true, otherwise, it is false. It is denoted as &&.
+boolean b1 = false && false; // false
+boolean b2 = false && true;  // false
+boolean b3 = true && false;  // false
+boolean b4 = true && true;   // true 
+OR is a binary operator that returns true if at least one operand is true, otherwise, it returns false. It is denoted as ||.
+boolean b1 = false || false; // false
+boolean b2 = false || true;  // true
+boolean b3 = true || false;  // true
+boolean b4 = true || true;   // true
+XOR (exclusive OR) is a binary operator that returns true if boolean operands have different values, otherwise, it is false.
+boolean b1 = false ^ false; // false
+boolean b2 = false ^ true;  // true
+boolean b3 = true ^ false;  // true
+boolean b4 = true ^ true;   // false
+The XOR operator is used less often than others. Just remember that Java has it. If you really need it, you can use it.
+
+The precedence of logical operators
+Below are the logical operations sorted in order of decreasing their priorities in expressions: ! (NOT), ^ (XOR), && (AND), || (OR).
+
+So, the following variable is true:
+
+boolean b = true && !false; // true, because !false is evaluated first
+To change the order of execution you can use round brackets (...).
+
+An example: trekking
+As an example, let's write a complex boolean expression that determines the possibility of trekking in summer and in other seasons.
+
+boolean cold = false;
+boolean dry = true;
+boolean summer = false; // suppose now is autumn
+
+boolean trekking = dry && (!cold || summer); // true, let's go to trek!
+Do not get confused in the expression above, otherwise, you will go trek in bad weather :) A programmer should understand not only arithmetic but also logical operations.
+
+Short-circuiting evaluation
+An interesting thing is that the && and || operators don't evaluate the second argument if it isn't necessary. When the first argument of the && operator evaluates to false, the overall value must be false; and when the first argument of the || operator evaluates to true, the overall value must be true. So:
+
+false && ... -> false, since it is not necessary to know what the right-hand side is;
+true || ... -> true, since it is not necessary to know what the right-hand side is.
+This behavior is known as short-circuit evaluation (do not confuse it with an electrical short circuit). It reduces the computation time, but can also be used to avoid some errors in programs. We will discuss this in the following topics.
