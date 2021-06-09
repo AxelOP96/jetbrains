@@ -1,17 +1,17 @@
 # jetbrains
 Practicas de java: Curso de JAVA en ingles y posteriormente traducido por mi.
  Learn Java while building real functional applications. You'll get to choose a project that suits your level and will get all the necessary knowledge to complete it. Completing the full track will prepare you to deal with various tasks related to desktop application or web development in Java. While progressing through different projects of this track you can learn to:
-Understand the syntax of Java and write well readable and efficient code.
-Work with professional development tools and GitHub.
-Apply the principles of object-oriented programming widely used in commercial development.
-Simplify your application design with functional programming.
-Use collections to effectively process data in your application.
-Use multicore processing to optimize the speed of your app.
-Use the Swing library for desktop development.
-Build an efficient web application with SpringBoot.
-Work with data formats like JSON and XML.
-Work with databases.
-Aprende Java mientras construyes aplicaciones reales funcionales. Puedes elegir un proyecto de acuerdo a tu nivel y tendras todo el conocimiento para completarlo. Completar el camino completo te preparará para manejar tareas varias relacionadas a aplicaciones de escritorio o desarrollo web en Java. Mientras progresas a través de diferentes proyectos de este camino aprenderas: a entender la sintaxis en Java y escribir un codigo eficiente y leible; a trabajar con herraminetas profesionales de desarrollo y GitHub; a aplicar los principios de programacion orientada a objetos usada en desarrollo comercial; a simplificar el diseño de tu aplicacion con programcion funcional; a usar procesamiento multinucleo para optimizar la velocidad de tu app; a usar la libreria swing para desarrollo de escritorio; a crear una aplicacion web eficiente con springboot; a trabajar con formatos de data como JSONy XML; y a trabajar con bases de datos. 
+*Understand the syntax of Java and write well readable and efficient code.
+*Work with professional development tools and GitHub.
+*Apply the principles of object-oriented programming widely used in commercial development.
+*Simplify your application design with functional programming.
+*Use collections to effectively process data in your application.
+*Use multicore processing to optimize the speed of your app.
+*Use the Swing library for desktop development.
+*Build an efficient web application with SpringBoot.
+*Work with data formats like JSON and XML.
+*Work with databases.
+(Aprende Java mientras construyes aplicaciones reales funcionales. Puedes elegir un proyecto de acuerdo a tu nivel y tendras todo el conocimiento para completarlo. Completar el camino completo te preparará para manejar tareas varias relacionadas a aplicaciones de escritorio o desarrollo web en Java. Mientras progresas a través de diferentes proyectos de este camino aprenderas: a entender la sintaxis en Java y escribir un codigo eficiente y leible; a trabajar con herraminetas profesionales de desarrollo y GitHub; a aplicar los principios de programacion orientada a objetos usada en desarrollo comercial; a simplificar el diseño de tu aplicacion con programcion funcional; a usar procesamiento multinucleo para optimizar la velocidad de tu app; a usar la libreria swing para desarrollo de escritorio; a crear una aplicacion web eficiente con springboot; a trabajar con formatos de data como JSONy XML; y a trabajar con bases de datos) 
 
 Project: Simple Tic-Tac-Toe
 About:
@@ -20,15 +20,16 @@ Everybody remembers this paper-and-pencil game from childhood: Tic-Tac-Toe, also
 primer desafio:
 You have a guest list of the people who registered their stay at the hotel. There are 4 rooms in the hotel: 1 single room, 2 double rooms and 1 family room for three guests. The guest list consists of 4 lines. Each line contains the name or the names of the guests registered together in one room.
 
-Read the names of the registered guests from the list and output each name in a separate line and in reverse order starting with the last registered guest. Note that the order of the guests registered in each room is undefined.
+Read the names of the registered guests from the list and output each name in a separate line and in reverse order starting with the last registered guest. Note that the order of the guests registered in each room is undefined.(Proyecto un simple tateti. Sobre esto: todos recordamos este juego de la niñez que se jugaba con papel y lapiz: tateti, tambien conocido como ceros y cruces y X y 0. Un simple error podia costarte el juego pero es suficiente para que la mayoria de los jugadores descubran la mejor estrategia rapidamente. Programemos tateti y juguemos. 
+Primer desafio: Tienes una lista de invitados de la gente que registró su estadia en el hotel. Hay 4 cuartos en el hotel: 1 cuarto simple, 2 cuartos dobles y 1 cuarto familiar para tres invitados. La lista de invitados consiste de 4 lineas. Cada linea contiene el nombre o los nombres de los invitados registrados juntos en un cuarto.
 
-Sample Input 1:
+Sample Input 1:(muestra de datos ingresados 1)
 
 Jane Kate
 John
 Mary Susan Paul
 Boris Ann
-Sample Output 1:
+Sample Output 1:(muestra de datos procesados)
 
 // Ann
 // Boris
@@ -1847,3 +1848,45 @@ The break statement terminates the loop and transfers execution to the statement
 The continue statement causes the loop to skip the remainder of its body and then immediately retest its condition prior to reiterating. In other words, it makes the loop skip to its next iteration.
 a || b is true if either a or b is true
 (a||b) && c is true if c is true and either a or b is true.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+        String s1 = scanner.nextLine();
+        String s2 = scanner.nextLine().replace(" ", "");
+        String st1 = s1.replaceAll(" ", "").trim();
+        String st2 = s2.replaceAll(" ", "").trim();
+        System.out.println(st1.equals(st2));
+
+    }
+}
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+        String input1 = scanner.nextLine();
+        String input2 = scanner.nextLine();
+        
+        String a = input1.replace(" ", "");
+        String b = input2.replace(" ", "");
+        
+        System.out.println(a.equalsIgnoreCase(b));
+    }
+}
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s1 = scanner.nextLine();
+        String s2 = scanner.nextLine();
+        String s3 = s1.replaceAll(" ", "").trim();
+        String s4 = s2.replaceAll(" ", "").trim();
+        System.out.println(s3.equals(s4));
+    }
+}
