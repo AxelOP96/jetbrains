@@ -21,7 +21,7 @@ primer desafio:
 You have a guest list of the people who registered their stay at the hotel. There are 4 rooms in the hotel: 1 single room, 2 double rooms and 1 family room for three guests. The guest list consists of 4 lines. Each line contains the name or the names of the guests registered together in one room.
 
 Read the names of the registered guests from the list and output each name in a separate line and in reverse order starting with the last registered guest. Note that the order of the guests registered in each room is undefined.(Proyecto un simple tateti. Sobre esto: todos recordamos este juego de la niñez que se jugaba con papel y lapiz: tateti, tambien conocido como ceros y cruces y X y 0. Un simple error podia costarte el juego pero es suficiente para que la mayoria de los jugadores descubran la mejor estrategia rapidamente. Programemos tateti y juguemos. 
-Primer desafio: Tienes una lista de invitados de la gente que registró su estadia en el hotel. Hay 4 cuartos en el hotel: 1 cuarto simple, 2 cuartos dobles y 1 cuarto familiar para tres invitados. La lista de invitados consiste de 4 lineas. Cada linea contiene el nombre o los nombres de los invitados registrados juntos en un cuarto.
+Primer desafio: Tienes una lista de invitados de la gente que registró su estadia en el hotel. Hay 4 cuartos en el hotel: 1 cuarto simple, 2 cuartos dobles y 1 cuarto familiar para tres invitados. La lista de invitados consiste de 4 lineas. Cada linea contiene el nombre o los nombres de los invitados registrados juntos en un cuarto.Lee los nombre de los invitados registrados de la lista y muestra cada nombre en una linea separada y en orden reverso empezando por el ultimo invitado registrado. Nota que el orden de los invitados registrados en cada cuarto es indefinido.)
 
 Sample Input 1:(muestra de datos ingresados 1)
 
@@ -40,11 +40,11 @@ Sample Output 1:(muestra de datos procesados)
 // Kate
 // Jane
 // 3desafio
-// IntelliJ IDEA can do something with context near the cursor.
+// IntelliJ IDEA can do something with context near the cursor.(Intellij IDEA puede hacer algo con el contexto cerca del cursor)
 
-// How to ask for it?
+// How to ask for it?(como pedirlo?)
 
-//  Select one option from the list
+//  Select one option from the list(selecciona una opcion de la lista)
 
 // Using Alt+Enter keystroke
 
@@ -60,43 +60,43 @@ Sample Output 1:(muestra de datos procesados)
 
 // Cats are robots!
 // desafio
-// Remember the conventions for naming variables? Make the variable CACTUS@HEIGHT not only syntactically correct, but also compliant with those recommendations. Enter the result.
+// Remember the conventions for naming variables? Make the variable CACTUS@HEIGHT not only syntactically correct, but also compliant with those recommendations. Enter the result.(recuerdas las convenciones para nombrar variables? hace a la variable CACTUS@HEIGHT no solo sintacticamente correcta sino sigue las recomendaciones. Ingresa el resultado)
 
 // What you'll do in this stage 1/5: Welcome to the battlefield!
 // Description
-// Tic-tac-toe is known all over the world. Each country may have its own version of the name, sometimes the rules are different, but the essence of the game remains the same. Below are the main rules that may be familiar to you since childhood.
+// Tic-tac-toe is known all over the world. Each country may have its own version of the name, sometimes the rules are different, but the essence of the game remains the same. Below are the main rules that may be familiar to you since childhood.(Tateti es conocido en todo el mundo. Cada pais puede tener su version del nombre, a veces las reglas son distintas, pero la esencia del juego se mantiene. Mas abajo estan las reglas principales que pueden ser familiares para vos de tu niñez.)
 
 // Tic-tac-toe is a game played by two players on a 3x3 grid. One of the players is 'X', and the other player is 'O'. X plays first, then O takes the next turn, and so on.
+(tateti es un juego en el que participan 2 jugadores en un tablero de 3x3. Uno de los jugadores usa la "x" y el otro la "o", la x juega primero y la o el siguiente turno)
+// The players write 'X' and 'O' on a 3x3 field.(los jugadores escriben x y o en un campo de 3x3)
 
-// The players write 'X' and 'O' on a 3x3 field.
+// The first player that puts 3 X's or 3 O's in a straight line (including diagonals) wins the game.(el primer jugador que pone 3 x o 3 o en una linea o diagonal gana el juego)
 
-// The first player that puts 3 X's or 3 O's in a straight line (including diagonals) wins the game.
+// Objectives(objetivos)
+// Your first task in this project is to print the game grid in the console output. Use what you’ve learned about the print() function to print three lines, each containing three characters (X’s and O’s) to represent a game of tic-tac-toe where all fields of the grid have been filled in.(tu primera tarea en este proyecto es imprimir el tablero del juego en la salida de la consola. Usa lo que aprenderas sobre la funcion imprimir para imprimir tres lineas, para que cada una contenga 3 caracteres (x y o) para representar el juego de tateti donde todos los campos  del tablero son llenados).
 
-// Objectives
-// Your first task in this project is to print the game grid in the console output. Use what you’ve learned about the print() function to print three lines, each containing three characters (X’s and O’s) to represent a game of tic-tac-toe where all fields of the grid have been filled in.
-
- Example
- The example below shows how your output might look:
+ Example(ejemplo)
+ The example below shows how your output might look:(el ejemplo de abajo muestra como la salida debe verse)
 
  X O X
  O X O
  X X O 
-What is Java?
-Java is a general-purpose modern programming language initially developed by Sun Microsystems, and currently owned by Oracle Corporation. The key feature of the language is platform independence: it means that the same Java program can be run on multiple platforms without any changes! This principle is also known as "write once, run anywhere" (or WORA).
+What is Java?(que es Java?)
+Java is a general-purpose modern programming language initially developed by Sun Microsystems, and currently owned by Oracle Corporation. The key feature of the language is platform independence: it means that the same Java program can be run on multiple platforms without any changes! This principle is also known as "write once, run anywhere" (or WORA).(Java es un lenguaje de programacion multiproposito desarrollado por microsistemas sun y actualmente es de la corporaacion Oracle. La principal herramienta de este lenguaje es la independencia de la plataforma: esto significa que puede ser ejecutado por multiples plataformas sin cambios,  este principio es conocido como escribe una vez y ejecutalo donde sea)
 
-Java has been one of the most popular programming languages for many years. It has earned the top position in the TIOBE index (a programming language popularity index). This language is used by a huge community of developers around the world! If you have a problem, you can always ask other developers or find a suitable answer online.
+Java has been one of the most popular programming languages for many years. It has earned the top position in the TIOBE index (a programming language popularity index). This language is used by a huge community of developers around the world! If you have a problem, you can always ask other developers or find a suitable answer online.(Java ha sido uno de los mas populares lenguajes de programacion por muchos años. Se ha ganado la alta posicion en el indice TIOBE, un indice de popularidad de lenguajes de programacion. Este lenguaje es usado por una enorme comunidad de desarrolladores por el mundo, si tienes un problema puedes preguntar a otros desarrolladores o encontrar una respuesta adecuada en linea)
 
-Java is used in our Android smartphones, the financial services industry, telecommunications, embedded systems, and in many other areas. Medical applications use it to store patient data, computer games, such as Minecraft, are created using Java; development tools like IntelliJ IDEA and Eclipse wouldn't exist without it.
+Java is used in our Android smartphones, the financial services industry, telecommunications, embedded systems, and in many other areas. Medical applications use it to store patient data, computer games, such as Minecraft, are created using Java; development tools like IntelliJ IDEA and Eclipse wouldn't exist without it. (Java es usado en nuestros celulares Android, la industria de servicios financieros, telecomunicaciones, sistemas embebidos, y en muchas otras areas. Aplicaciones medicas lo usan para almacenar data de los pacientes, juegos de computadora como minecraft son creados usando Java; herraminetas de desarrollo como Intellij IDEA y Eclipse no existirian sin él)
 
-A short history of Java
-The Java language project was initiated in 1991 by James Gosling and his colleagues. In the beginning, the language was called "Oak." Later the project was renamed "Java" as a reference to Java coffee. For this reason, the language’s logo is a cup of coffee.
+A short history of Java(una historia corta de Java)
+The Java language project was initiated in 1991 by James Gosling and his colleagues. In the beginning, the language was called "Oak." Later the project was renamed "Java" as a reference to Java coffee. For this reason, the language’s logo is a cup of coffee.(El proyecto de lenguaje Java fue inciado en 1991 por James Gosling y sus colegas. En el principio, el lenguaje fue llamado "oak". Mas tarde el proyecto fue renombrado Java como una referencia al cafe Java.
 
-Sun Microsystems released Java 1.0 in 1996. After that, new versions were released every 1 to 3 years. Since Java 9, released in 2017, new versions have been released every 6 months. You can read more about its history and find the most recent version here.
+Sun Microsystems released Java 1.0 in 1996. After that, new versions were released every 1 to 3 years. Since Java 9, released in 2017, new versions have been released every 6 months. You can read more about its history and find the most recent version here.(Microsistemas Sun liberaron Java 1.0 en 1996. Luego de eso, nuevas versiones eran liberadas cada 1 o 3 años. Desde Java 9, liberado en 2017, nuevas versiones son liberadas cada 6 meses)
 
-Some important features of Java
-As we've mentioned before, the most important feature of Java is platform independence.
+Some important features of Java(Algunas importantes herramientas de Java)
+As we've mentioned before, the most important feature of Java is platform independence.(Como mencionamos antes, la herramienta mas importante de Java es su independencia de plataforma)
 
-Another important feature is a simple and clear syntax. Many elements of the language are easy to read and are widely used in other programming languages such as C/C++, C#, JavaScript, and Go.
+Another important feature is a simple and clear syntax. Many elements of the language are easy to read and are widely used in other programming languages such as C/C++, C#, JavaScript, and Go.(Otra importante herramienta es su simple y clara sintaxis. Muchos elementos del lenguaje son faciles de leer y son ampliamente usados en otros lenguajes de programacion como C/C++, C#, JavaScript y Go)
 
 If you have ever written programs in C/C++, you know that manual memory cleaning can lead to bugs in the code. Fortunately, Java has a garbage collector that automatically cleans memory from unused objects during runtime.
 
@@ -2141,3 +2141,182 @@ An interesting thing is that the && and || operators don't evaluate the second a
 false && ... -> false, since it is not necessary to know what the right-hand side is;
 true || ... -> true, since it is not necessary to know what the right-hand side is.
 This behavior is known as short-circuit evaluation (do not confuse it with an electrical short circuit). It reduces the computation time, but can also be used to avoid some errors in programs. We will discuss this in the following topics.
+<!------Theory: Relational operators-------!>
+List of relational operators
+Java provides six relational operators to compare numbers:
+
+== (equal to)
+!= (not equal to)
+> (greater than)
+>= (greater than or equal to)
+< (less than)
+<= (less than or equal to)
+The result of applying a relational operator to its operands takes the boolean type (true or false) regardless of the types of operands.
+
+Comparing integer numbers
+Relational operators allow you to easily compare, among other things, two integer numbers. Here are some examples below:
+
+int one = 1;
+int two = 2;
+int three = 3;
+int four = 4;
+
+boolean oneIsOne = one == one; // true
+
+boolean res1 = two <= three; // true
+boolean res2 = two != four;  // true
+boolean res3 = two > four;   // false
+boolean res4 = one == three; // false
+Relational operators can be used in mixed expressions together with arithmetic operators. In such expressions, relational operators have lesser priorities than arithmetic operators.
+
+In the following example, first of all, two sums are calculated, and then they are compared using the operator >.
+
+int number = 1000;
+boolean result = number + 10 > number + 9; // 1010 > 1009 is true
+The result is true.
+
+Joining relational operations using logical operators
+In Java, you cannot write an expression like a <= b <= c. Instead, you should join two boolean expressions using logical operators like || and &&.
+
+Here is an example:
+
+number > 100 && number < 200; // it means 100 < number < 200 
+Also, we can write parts of the expression in parentheses to improve readability:
+
+(number > 100) && (number < 200);
+But parentheses are not necessary here because relational operators have a higher priority than logical operators.
+
+Here is a more general example of variables.
+
+int number = ...             // it has a value
+int low = 100, high = 200;   // borders
+
+boolean inRange = number > low && number < high;  // joining two expressions using AND.
+The code checks if the value of number belongs to a range.
+
+So, logical operators allow you to join a sequence of relational operations into one expression.
+
+An example of a program
+Suppose there are three children in the sports class. You want to check if their heights are arranged in descending order. The following program reads three integer numbers h1, h2, and h3 and then checks if h1 >= h2 and h2 >= h3. Note that h means the height of a child.
+
+import java.util.Scanner;
+
+public class CheckAscOrder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int h1 = scanner.nextInt();
+        int h2 = scanner.nextInt();
+        int h3 = scanner.nextInt();
+
+        boolean descOrdered = (h1 >= h2) && (h2 >= h3);
+
+        System.out.println(descOrdered);
+    }
+}
+Here are several input-output pairs:
+
+Input 1
+
+185 178 172
+Output 1
+
+true
+Input 2
+
+181 184 177
+Output 2
+
+false
+It is possible not to use an additional variable to store the boolean result before output:
+
+System.out.println((h1 >= h2) && (h2 >= h3));
+But when your condition is quite long, it is hard to understand what the code does without some explanations. A variable with a good name provides such an explanati
+<!----------Theory: Conditional statement -----------!>
+The conditional statement is a construction that allows a program to perform different computations depending on the value of a Boolean expression. If it is true, the program performs one computation; otherwise, if it is false, the program performs another computation. Here are some examples of Boolean expressions: a > b, i - j == 1, and so on.
+
+The conditional statement has different forms. We will use all of them.
+
+The single if-case
+The simplest form of the conditional statement consists of the keyword if, a Boolean expression, and a body enclosed in curly braces.
+
+if (expression) {
+    // body: do something
+}
+If the expression is true, the statements inside the code block are executed; otherwise, the program skips them.
+
+See the following example.
+
+int age = ...; // it has a value
+if (age > 100) {
+    System.out.println("Very experienced person");
+}
+In this example, if the age is greater than 100 the code prints "Very experienced person", otherwise, it does nothing.
+
+Sometimes you will see a situation when the expression in a condition is a single boolean type variable. Instead of writing b == true or b == false, use this variable (or its negation with !) as the Boolean expression:
+
+boolean b = ...; // it is true or false
+if (b) { // or !b
+    // do something
+}
+A conditional statement can be used in any place in a program where the statement is expected. It can be even nested inside another conditional statement to perform multistage checks.
+
+The if-else-cases
+The if-case above can be extended with the keyword else and another body to do alternative actions when the expression is false.
+
+if (expression) {    
+    // do something
+} else {
+    // do something else
+} 
+In this case, if the expression is true, then the first code block is executed; otherwise, the second code block is executed, but not both together.
+
+In the example below, the program outputs different text depending on the value of num (even or odd).
+
+Note, a number is even if it can be divided exactly by 2; otherwise it's odd.
+int num = ...; // the num is initialized by some value
+
+if (num % 2 == 0) {
+    System.out.println("It's an even number");
+} else {    
+    System.out.println("It's an odd number");
+}
+Since a number can only be even or odd, only one message will be displayed. If num is 10, the program outputs "It's an even number". If the value is 11, it outputs "It's an odd number".
+
+The if-else-if-cases
+The most general form of the conditional statement consists of several conditions and else-branches.
+
+if (expression0) {
+    // do something
+} else if (expression1) {
+    // do something else 1
+// ...
+} else if (expressionN) {
+    // do something else N
+}
+The following code outputs recommendations about what computer you need to buy depending on your budget.
+
+long dollars = ...; // your budget
+
+if (dollars < 1000) {
+    System.out.println("Buy a laptop");
+} else if (dollars < 2000) {
+    System.out.println("Buy a personal computer");
+} else if (dollars < 100_000) {
+    System.out.println("Buy a server");
+} else {
+    System.out.println("Buy a data center or a quantum computer");
+}
+This conditional statement has four branches: dollars < 1000, dollars < 2000, dollars < 100_000 and dollars >= 100_000. If the value of dollars is 10_000 it prints "Buy a server".
+
+A conditional statement with multiple branches creates a decision tree, whose nodes consist of boolean expressions, and each branch is marked with true or false. The true-branch leads to a block of statements to be executed and a false-branch leads to the next condition to be checked. The last false-branch means "in all other cases".
+
+When talking about conditions programmers often use the term "control flow statements". Control flow is the order in which various parts of a program are executed. You will probably meet this term in our topics and on other external resources.
+The picture below demonstrates such a tree for the example with computers.
+
+
+
+Decision tree for buying a laptop
+
+
+This example completes our examination of conditional statements
