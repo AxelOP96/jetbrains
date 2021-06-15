@@ -2320,3 +2320,323 @@ Decision tree for buying a laptop
 
 
 This example completes our examination of conditional statements
+<!------- Theory: Ternary operator----------!>
+the ternary operator is an operator which evaluates a condition and chooses one of two cases to execute. It is also called the conditional operator. The operator can be considered as a form of the if-then-else statement. The ternary operator should not be confused with the conditional statement, despite their similarity. This operator can be used in places where an expression is expected.
+
+Sometimes the ternary operator is more readable and concise than the corresponding if statement.
+
+Let's start learning this operator with an example. Suppose we have to find the maximum of two int variables, a and b. It is easy to write using a conditional statement:
+
+int a = ...;
+int b = ...;
+int max = ...;
+
+if (a > b) {
+    max = a;
+} else {
+    max = b;
+}
+The equal ternary operator looks like:
+
+int max = a > b ? a : b;
+This code is more concise than the code above, isn't it?
+
+The general syntax of the ternary operator is the following:
+
+result = condition ? trueCase : elseCase;
+It includes two special symbols ? and :.
+
+Here, the condition is a Boolean expression that evaluates to either true or false. If this expression is true, the ternary operator evaluates trueCase, otherwise elseCase is evaluated. It is important that trueCase and elseCase are expressions which can be reduced to a common type. This type determines the type of the result.
+
+Let's consider another example that prints whether a number is even or odd.
+
+int num = ...;  // it's initialized by a value
+System.out.println(num % 2 == 0 ? "even" : "odd");
+This ternary operator consists of three operands: the value of the expression num % 2 == 0, and two string literals "even" and "odd". The result type of it is String.
+
+Note, Java allows us to nest one ternary operator into another one, but it can be less readable than the corresponding conditional statement. If you do this, be careful.
+Imagine you need to compare 2 integer numbers and print equal in case they are equal, more if the first one has a bigger value than the second and less otherwise. The task can be solved using a combination of 2 ternary operators:
+
+int a = ...; // it's initialized by a value
+int b = ...; // it's initialized by a value
+String result = a == b ? "equal" :
+                a > b ? "more" : "less";
+At first, the outer ternary operator checks equality of a and b numbers. If it is true, equal is printed, otherwise, the nested ternary operator a > b ? "more" : "less" is calculated. To improve readability, the whole expression is divided into 2 lines.
+<!--------Theory: The for-loop--------!>
+Sometimes we need to repeat a block of code a certain number of times. To do this, Java provides the for-loop. This loop is often used to iterate over a range of values or through an array. If the number of iterations or the range borders are known, it is recommended to use the for-loop. If they are unknown, the while-loop may be the preferable solution.
+
+The basic for-loop syntax
+The for-loop has the following basic syntax:
+
+for (initialization; condition; modification) {
+    // do something
+} 
+Parts of the loop:
+
+the initialization statement is executed once before the loop begins; usually, loop variables are initialized here;
+the condition is a Boolean expression that determines the need for the next iteration; if it's false, the loop terminates;
+the modification is a statement that changes the value of the loop variables; it is invoked after each iteration of the loop; usually, it uses increment or decrement to modify the loop's variable.
+Inside the loop's body, the program can perform any correct Java statements. It can even contain other loops.
+
+The order of execution for any for-loop is always the same:
+
+the initialization statement;
+if the condition is false then terminate the loop;
+if the condition is true, then the loop's body is executed;
+the modification is performed;
+go to stage 2 (condition).
+Let's write a loop for printing integer numbers from 0 to 9 on the same line.
+
+int n = 9;
+for (int i = 0; i <= n; i++) {
+    System.out.print(i + " "); // here, a space is used to separate numbers
+}
+The code displays:
+
+0 1 2 3 4 5 6 7 8 9 
+The variables declared in the initialization statement are visible only inside the scope that includes all parts of the loop: the condition, the body, and the modification. The integer loop variables are often named as i, j, k, or index.
+
+Here’s another example. Let's calculate the sum of the integer numbers from 1 to 10 (inclusive) using the for-loop.
+
+int startIncl = 1, endExcl = 11;
+
+int sum = 0;
+for (int i = startIncl; i < endExcl; i++) {
+    sum += i;
+}
+
+System.out.println(sum); // it prints "55"
+Skipping parts
+The initialization statement, the condition, and the modification parts are optional, the for loop might not have all of them.
+
+It is possible to declare a variable outside the loop:
+
+int i = 10;
+for (; i > 0; i--) {
+    System.out.print(i + " ");
+}
+Moreover, it is also possible to write an infinite loop without these parts at all:
+
+for (;;) {
+    // do something
+}
+Nested loops
+It's possible to nest one for-loop in another for-loop. This approach is used to process multidimensional structures like tables (matrices), data cubes, and so on.
+
+As an example, the following code prints the multiplication table of numbers from 1 to 9 (inclusive).
+
+for (int i = 1; i < 10; i++) {
+    for (int j = 1; j < 10; j++) {
+        System.out.print(i * j + "\t");
+    }
+    System.out.println();
+}
+It outputs:
+
+1   2   3   4   5   6   7   8   9  
+2   4   6   8   10  12  14  16  18  
+3   6   9   12  15  18  21  24  27  
+4   8   12  16  20  24  28  32  36  
+5   10  15  20  25  30  35  40  45  
+6   12  18  24  30  36  42  48  54  
+7   14  21  28  35  42  49  56  63  
+8   16  24  32  40  48  56  64  72  
+9   18  27  36  45  54  63  72  81 
+Write a program that prints the product of all integer numbers from a to b (a < b).
+Include a and exclude b from the product
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        long result = a;
+
+        for (long i = a; i < b - 1; i++) {
+            result += i * result;
+        }
+        System.out.println(result);
+    }
+}
+//opcion 2
+import java.io.BufferedInputStream;
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        try (Scanner scanner = new Scanner(new BufferedInputStream(System.in))) {
+            final int start = scanner.nextInt();
+            final int end = scanner.nextInt();
+            final BigInteger res = IntStream.range(start, end)
+                    .mapToObj(BigInteger::valueOf)
+                    .reduce(BigInteger.ONE, BigInteger::multiply);
+            System.out.println(res);
+        }
+    }
+}
+//opcion 3
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        long product = num1;
+        for (int i = num1 + 1; i < num2; i++) {
+            product *= i;
+        }
+
+        System.out.println(product);
+    }
+}
+Choose all correct ways to write the for-loop.
+
+a)
+
+for (int i = 0; i < 10; i++) { /* body */ }
+b)
+
+int i = 0; for (; i < 10; ++i) { /* body */ }
+c)
+
+for (int k = 10; k > 1; ) { k--; /* some statements */ }
+d)
+
+for (;;) { /* body */ }
+
+Given a sequence of natural numbers, not exceeding 30000. Find the maximum element divisible by 4. There is always an element divisible by 4 in the sequence and the number of elements does not exceed 1000.
+
+As input, the program receives the number of elements in the sequence n (first line) and then the elements themselves (next n lines). The program should print a single number: the maximum element of the sequence divisible by 4.
+
+Try to solve this problem by using a for-loop.
+
+ Report a typo
+HINT by 
+avatar
+ Joe T
+/**Given a sequence of natural numbers, not exceeding 30000.
+ *  Find the maximum element divisible by 4.
+ *  First, input the number of elements.
+ *  Then input the elements themselves.
+ *  It tests each element to see if it is divisible by 4.
+ *  Then it tests to see if each new number is larger than the max.
+ *  If ever both tests are true for an entered number, it becomes the new max.
+ *
+ *
+ *  In the sequence, there is always an element divisible by 4.
+ *  The number of elements does not exceed 1000.
+ *  The program should print a single number: the maximum element of the sequence divisible by 4
+
+ import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner sc = new Scanner(System.in);
+        int elements = sc.nextInt();
+        int num; 
+        int max = 0;  
+        for (int i = 0; i < elements; i++) {
+            num = sc.nextInt();
+            if (num % 4 == 0 && num > max) {
+                max = num;
+            }
+        }
+        System.out.print(max);
+    }
+}
+//opcion 2
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int numOfNums = scanner.nextInt();
+        
+        int max = 0;
+        
+        for (int i = 0; i < numOfNums; i++) {
+            int input = scanner.nextInt();
+            
+            if (input > max && input % 4 == 0) {
+                max = input;
+            }
+        }
+        
+        System.out.println(max);
+    }
+}
+
+Find the sum of numbers divisible by 6 in the given sequence of natural numbers.
+
+The first line of the input is the number of elements in the sequence; the next lines are the elements themselves.
+
+It is guaranteed, that there is always a number divisible by 6 in the sequence
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int r = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int c = sc.nextInt();
+            if (c % 6 == 0) {
+                r = r + c;
+            }
+        }
+        System.out.println(r);
+    }
+}
+//opcion 2
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        int end = userInput.nextInt();
+        int sum = 0;
+        
+        for (int i = 0; i < end; i++) {
+            int temp = userInput.nextInt();
+            if (temp % 6 == 0) {
+                sum += temp;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+
+//opcion 3
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+
+        int numElements = scanner.nextInt();
+        int sum = 0;
+
+        for (int i = 1; i <= numElements; i++) {
+            int val = scanner.nextInt();
+
+            if (val % 6 == 0) {
+                sum += val;
+            }
+        }
+
+        System.out.println(sum);
+    }
+}
