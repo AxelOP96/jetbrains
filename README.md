@@ -1,6 +1,10 @@
 # jetbrains
 Practicas de java: Curso de JAVA en ingles y posteriormente traducido por mi.
+
+
  Learn Java while building real functional applications. You'll get to choose a project that suits your level and will get all the necessary knowledge to complete it. Completing the full track will prepare you to deal with various tasks related to desktop application or web development in Java. While progressing through different projects of this track you can learn to:
+ 
+ 
 *Understand the syntax of Java and write well readable and efficient code.
 *Work with professional development tools and GitHub.
 *Apply the principles of object-oriented programming widely used in commercial development.
@@ -12,6 +16,8 @@ Practicas de java: Curso de JAVA en ingles y posteriormente traducido por mi.
 *Work with data formats like JSON and XML.
 *Work with databases.
 (Aprende Java mientras construyes aplicaciones reales funcionales. Puedes elegir un proyecto de acuerdo a tu nivel y tendras todo el conocimiento para completarlo. Completar el camino completo te preparará para manejar tareas varias relacionadas a aplicaciones de escritorio o desarrollo web en Java. Mientras progresas a través de diferentes proyectos de este camino aprenderas: a entender la sintaxis en Java y escribir un codigo eficiente y leible; a trabajar con herraminetas profesionales de desarrollo y GitHub; a aplicar los principios de programacion orientada a objetos usada en desarrollo comercial; a simplificar el diseño de tu aplicacion con programcion funcional; a usar procesamiento multinucleo para optimizar la velocidad de tu app; a usar la libreria swing para desarrollo de escritorio; a crear una aplicacion web eficiente con springboot; a trabajar con formatos de data como JSONy XML; y a trabajar con bases de datos) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Project: Simple Tic-Tac-Toe
 About:
@@ -98,21 +104,25 @@ As we've mentioned before, the most important feature of Java is platform indepe
 
 Another important feature is a simple and clear syntax. Many elements of the language are easy to read and are widely used in other programming languages such as C/C++, C#, JavaScript, and Go.(Otra importante herramienta es su simple y clara sintaxis. Muchos elementos del lenguaje son faciles de leer y son ampliamente usados en otros lenguajes de programacion como C/C++, C#, JavaScript y Go)
 
-If you have ever written programs in C/C++, you know that manual memory cleaning can lead to bugs in the code. Fortunately, Java has a garbage collector that automatically cleans memory from unused objects during runtime.
+If you have ever written programs in C/C++, you know that manual memory cleaning can lead to bugs in the code. Fortunately, Java has a garbage collector that automatically cleans memory from unused objects during runtime.(Si has escrito promamas en C/C++ sabras que el manual de limpieza de memoria puede llevar a bugs en el codigo. A fortunadamente, Java tiene un recolector de basura que automaticamente limpia la memoria de los objetos que no tienen uso durante la ejecucion)
 
-It is also important to note that Java supports multiple programming paradigms; you will get to know more about them in these topics. Java is primarily an imperative language based on the object-oriented concept: almost every part of a program is an object. Therefore, a program itself can be considered as a set of interacting objects. Also, it partially supports modern programming paradigms such as generic programming, concurrent programming, functional programming, and some others.
+It is also important to note that Java supports multiple programming paradigms; you will get to know more about them in these topics. Java is primarily an imperative language based on the object-oriented concept: almost every part of a program is an object. Therefore, a program itself can be considered as a set of interacting objects. Also, it partially supports modern programming paradigms such as generic programming, concurrent programming, functional programming, and some others.(Es importante notar que Java soporta paradigmas de programacion multiple; sabras de ello en los siguientes temas. Java es primariamente un lenguaje imperativo basado en el concepto de orientacion a objetos: Casi cada parte de un programa es un objeto. A demas, un programa en si mismo puede ser considerado como un conjunto de objetos interactuando. Tambien, soporta parcialmente paradigmas de programacion modernos como la programacion generica, programacion concurrente, programacion funcional y muchos otros).
 
 If you are a beginner in programming, it may be difficult to comprehend all the features of Java right now. This is not a bad thing. Throughout this set of topics, you will learn about all of these concepts.
-In conclusion, Java is a modern and popular programming language that can be successfully used in almost all domains.
-Literals
-Regardless of its complexity, a program always performs operations on numbers, strings, and other values. These values are called literals. There are many different sorts of literals in Java, but in this topic we will focus only on a few of them: the ones that surround us all the time in everyday life.
+In conclusion, Java is a modern and popular programming language that can be successfully used in almost all domains.(Si sos un principiante en la programacion, deberia ser dificil comprender todas las herramientas de Java ahora mismo. Esto no es malo. A traves, de varios temas aprenderas sobre todos estos conceptos)
 
-Let's consider integer numbers, strings, and characters in the format in which they are written in Java.
+
+Literals
+Regardless of its complexity, a program always performs operations on numbers, strings, and other values. These values are called literals. There are many different sorts of literals in Java, but in this topic we will focus only on a few of them: the ones that surround us all the time in everyday life.(A pesar de su complejidad, un programa siempre realiza operaciones con numeros, strings y otros valores. Estos valores son llamados literales. Hay muchas clases de literales en Java, pero ahora nos enfocaremos en unos pocos: aquellos que nos roddean todo el tiempo en nuestra vida cotidiana)
+
+Let's consider integer numbers, strings, and characters in the format in which they are written in Java.(Consideramos numeros enteros, strings, y caracteres en el formato en el que son escritos en Java)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Integer numbers
-These numbers are used to count things in the real world. Also, we will often use them in Java.
+These numbers are used to count things in the real world. Also, we will often use them in Java.(Estos numeros son usados para contar cosas en el mundo real. Tambien, los usamos a menudo en Java)
 
-Here are several examples of valid integer number literals separated by commas: 0, 1, 2, 10, 11, 100.
+Here are several examples of valid integer number literals separated by commas: 0, 1, 2, 10, 11, 100.(Aqui hay varios ejemplos de numeros enteros validos separados por comas: 0, 1, 2, 10, 11, 100.
 
 If an integer value contains a lot of digits, we can add underscores to divide the digit into blocks for increased readability: 1_000_000. It's more readable than the same value written as 1000000.
 
