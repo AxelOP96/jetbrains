@@ -109,7 +109,7 @@ If you have ever written programs in C/C++, you know that manual memory cleaning
 It is also important to note that Java supports multiple programming paradigms; you will get to know more about them in these topics. Java is primarily an imperative language based on the object-oriented concept: almost every part of a program is an object. Therefore, a program itself can be considered as a set of interacting objects. Also, it partially supports modern programming paradigms such as generic programming, concurrent programming, functional programming, and some others.(Es importante notar que Java soporta paradigmas de programacion multiple; sabras de ello en los siguientes temas. Java es primariamente un lenguaje imperativo basado en el concepto de orientacion a objetos: Casi cada parte de un programa es un objeto. A demas, un programa en si mismo puede ser considerado como un conjunto de objetos interactuando. Tambien, soporta parcialmente paradigmas de programacion modernos como la programacion generica, programacion concurrente, programacion funcional y muchos otros).
 
 If you are a beginner in programming, it may be difficult to comprehend all the features of Java right now. This is not a bad thing. Throughout this set of topics, you will learn about all of these concepts.
-In conclusion, Java is a modern and popular programming language that can be successfully used in almost all domains.(Si sos un principiante en la programacion, deberia ser dificil comprender todas las herramientas de Java ahora mismo. Esto no es malo. A traves, de varios temas aprenderas sobre todos estos conceptos)
+In conclusion, Java is a modern and popular programming language that can be successfully used in almost all domains.(Si sos un principiante en la programacion, deberia ser dificil comprender todas las herramientas de Java ahora mismo. Esto no es malo. A traves, de varios temas aprenderas sobre todos estos conceptos. En conclusion, Java es un lenguaje de programacion moderno y popular que puede ser usado exitosamente en casi todos los dominios)
 
 
 Literals
@@ -124,10 +124,10 @@ These numbers are used to count things in the real world. Also, we will often us
 
 Here are several examples of valid integer number literals separated by commas: 0, 1, 2, 10, 11, 100.(Aqui hay varios ejemplos de numeros enteros validos separados por comas: 0, 1, 2, 10, 11, 100.
 
-If an integer value contains a lot of digits, we can add underscores to divide the digit into blocks for increased readability: 1_000_000. It's more readable than the same value written as 1000000.
+If an integer value contains a lot of digits, we can add underscores to divide the digit into blocks for increased readability: 1_000_000. It's more readable than the same value written as 1000000.(Si un valor entero contiene muchos digitos podemos agregar guiones bajos para dividir los digitos en bloques para mejorar la lectura:1_000_000. Es mas leible que el mism0o valor escrito como 1000000.)
 
 Characters
-A single character can represent a digit, a letter or another symbol. To write a character we use single quotes as follows: 'A', 'B', 'C', 'x', 'y', 'z', '0', '1', '2', '9'. Character literals can represent symbols of an alphabet, digits from '0' to '9', whitespaces (' '), or other characters or symbols ('$').
+A single character can represent a digit, a letter or another symbol. To write a character we use single quotes as follows: 'A', 'B', 'C', 'x', 'y', 'z', '0', '1', '2', '9'. Character literals can represent symbols of an alphabet, digits from '0' to '9', whitespaces (' '), or other characters or symbols ('$').(Un simple caracter puede representar un digito, una letra u otro simbolo. Para escribir un caracter usamos comillas simples como: '1','2',etc. Los literales de caracter pueden representar simbolos de un alfabeto, digitos del '0' al '9', espacios en blanco ' ', u otros caracteres o simbolos('$').
 
 Do not confuse characters that represent numbers (e.g. '9'), with numbers themselves (e.g. 9).
 
