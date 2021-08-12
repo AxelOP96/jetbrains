@@ -140,20 +140,20 @@ A character can't include two and more digits or letters because it represents o
 Strings
 A string is a sequence of any individual characters. Strings represent text information such as a text of advertising, an address of a web page or a login on a site.(Un string es una secuencia de caracteres individuales. Strings representan informacion de texto como texto de advertencia, una direccion de una pagina web o el ingreso a un sitio)
 
-To write a string we use double quotes instead of single ones. Here are some valid examples: "text", "I want to know Java", "123456", "e-mail@gmail.com". A string consisting of a single character like "A" is also a valid string, but do not confuse it with the 'A' character.(Para escribir un String usamos dobles comillas en vez de las simples. Aqui hay algunos ejemplos validos: "texto", "Quiero saber Java", "123456", "email@gmail.com" Un string consistente de un caracter simple como "A" es tambien un string valido, pero no hay que confundirlo con el caracter 'A'.
+To write a string we use double quotes instead of single ones. Here are some valid examples: "text", "I want to know Java", "123456", "e-mail@gmail.com". A string consisting of a single character like "A" is also a valid string, but do not confuse it with the 'A' character.(Para escribir un String usamos dobles comillas en vez de las simples. Aqui hay algunos ejemplos validos: "texto", "Quiero saber Java", "123456", "email@gmail.com" Un string consistente de un caracter simple como "A" es tambien un string valido, pero no hay que confundirlo con el caracter 'A')
 
-As you can see, strings can include letters, digits, whitespaces, and other characters.
+As you can see, strings can include letters, digits, whitespaces, and other characters.(Como puedes ver, los strings pueden contener letras, digitos, espacios y otros caracteres)
 
-Remember
-Do not confuse these literals:
+Remember(Recuerda)
+Do not confuse these literals:(No confundas estos literales:)
 
 123 is an integer number, "123" is a string;
 'A' is a character, "A" is a string;
 '1' is a character, 1 is an integer number.
 
-In this topic, we will build our very first Java program. Our program will simply print "Hello, World!" on the screen (a tradition by most programmers when learning new languages). Our code may not seem too exciting at first, however, we will learn about the basic template that all Java programs need to follow.
-The Hello World program
-Here is the Java code of this program:
+In this topic, we will build our very first Java program. Our program will simply print "Hello, World!" on the screen (a tradition by most programmers when learning new languages). Our code may not seem too exciting at first, however, we will learn about the basic template that all Java programs need to follow.(En este tema, construiremos nuestro primer programa en Jva. Nuestro programa simplemente imprimira "Hola mundo!" en la pantalla. Una tradicion de los programadores cuando aprenden un nuevo lenguaje)
+The Hello World program(El programa hola mundo)
+Here is the Java code of this program:(Aqui esta el codigo Java de este programa:)
 
 public class Main {
     public static void main(String[] args) {
@@ -163,7 +163,10 @@ public class Main {
 You can type this code in the Your Code section here and then press the execute button. In the result section, you will see:
 
 Hello, World!
-If you have already installed Java, you can run the program on your computer. If not, there is no need to install it right now. We will do that later.
+If you have already installed Java, you can run the program on your computer. If not, there is no need to install it right now. We will do that later.(Si ya instalaste Java, puedes ejecutar el programa en tu computadora. Sino no hay necesidad de instalarlo ahora mismo. Lo haremos mas tarde.)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 The basic terminology
 Now that you have seen the result, let's learn some basic terminology and then try to understand this program.
 
@@ -2653,4 +2656,4 @@ class Main {
 
         System.out.println(sum);
     }
-}
+} 
