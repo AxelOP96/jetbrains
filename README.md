@@ -223,9 +223,9 @@ class Main {
 
 <!---- Displaying text using println() and print()-----!>
 
-Standard output is a receiver to which a program can send information (text). It is supported by all common operating systems. Java provides a special object System.out to work with the standard output. We will often use it to print something.
+Standard output is a receiver to which a program can send information (text). It is supported by all common operating systems. Java provides a special object System.out to work with the standard output. We will often use it to print something.(La salida estandar es un recibidor en el cual un programa puede recibir informacion, texto. Esta suportado por todos los sistemas operativos comunes. Java provee un objeto especial System.out para trabajar con la salida estandar. Nosotros lo usaremos seguido para imprimir algo)
 
-The println method displays the passed string followed by a new line on the screen (print-line). As an example, the following code fragment prints four lines.
+The println method displays the passed string followed by a new line on the screen (print-line). As an example, the following code fragment prints four lines.(El mtodo println muestra el string seguido por una nueva linea en la pantalla)
 
 System.out.println("I ");
 System.out.println("know ");
@@ -237,9 +237,9 @@ I
 know
 Java
 well.
-All strings were printed as is, without double quotes.
+All strings were printed as is, without double quotes.(Todos los strings se imprimieron como estaban sin dobles comillas)
 
-The method allows you to print an empty line when no string is given:
+The method allows you to print an empty line when no string is given:(El metodo te permite imprimr una linea vacia cuando no hay un string dado
 
 System.out.println("Java is a popular programming language.");
 System.out.println(); // prints empty line
@@ -249,7 +249,7 @@ The output:
 Java is a popular programming language.
 
 It is used all over the world!
-The print method displays the passed value and places the cursor (the position where we display a value) after it. As an example, the code below outputs all strings in a single line.
+The print method displays the passed value and places the cursor (the position where we display a value) after it. As an example, the code below outputs all strings in a single line.(El metodo imprimir muestra el valor pasado y coloca el cursor (la posicion donde muestra el valor) despues de el. Como ejemplo, el codigo debajo devuelve todos los strings en una sola linea)
 
 System.out.print("I ");
 System.out.print("know ");
@@ -258,7 +258,9 @@ System.out.print("well.");
 The output:
 
 I know Java well.
-Pay attention to the spaces between words. We pass them to methods for printing.
+Pay attention to the spaces between words. We pass them to methods for printing.(Presta atencion a los espacios entre palabras. Los pasamos a metodos para imprimir)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Printing numbers and characters
 Both methods println and print allow a program to print not only strings and characters, but also numbers.
