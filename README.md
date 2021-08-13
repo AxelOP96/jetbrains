@@ -168,17 +168,20 @@ If you have already installed Java, you can run the program on your computer. If
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The basic terminology
-Now that you have seen the result, let's learn some basic terminology and then try to understand this program.
+Now that you have seen the result, let's learn some basic terminology and then try to understand this program.(Ahora que has visto el resultado, aprenderemos terminologia basica y luego intentaremos entender este programa)
 
-Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequence of statements, in which statements are executed in the order that they are written – from top to bottom in a sequential manner;
-Statement – a single action (like print a text) terminated by semi-colon (;);
-Block – a group of zero, one or more statements enclosed by a pair of braces {...}; There are two such blocks in the program above.
-Method – a sequence of statements that represents a high-level operation (also known as subprogram or procedure).
-Syntax – a set of rules that define how a program needs to be written in order to be valid; Java has its own specific syntax that we will learn;
-Keyword – a word that has a special meaning in the programming language (public, class, and many others). These words cannot be used as variable names for your own program;
-Identifier or name – a word that refers to something in a program (such as a variable or a function name);
-Comment – a textual explanation of what the code does. Java comments start with //.
-Whitespace – all characters that are not visible (space, tab, newline, etc.).
+Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequence of statements, in which statements are executed in the order that they are written – from top to bottom in a sequential manner;(Un Programa es una secuencia de instrucciones que son ejecutadas una despues de otra en una forma predecible. El flujo secuencial es la mas comun y sencilla secuencia de declaraciones, en los que las declaraciones son ejecutadas en el orden en que son escritos de arriba hacia abajo en una forma secuencial.)
+Statement – a single action (like print a text) terminated by semi-colon (;);(Declaracion es una accion, como imprimir un texto terminado con un ;.)
+Block – a group of zero, one or more statements enclosed by a pair of braces {...}; There are two such blocks in the program above.(Bloque es un grupo de cero, uno o mas declaraciones encerrados dentro de un par de llaves {} 
+Method – a sequence of statements that represents a high-level operation (also known as subprogram or procedure).(Metodo es una secuencia de declaraciones que representa una operacion de alto nivel, tambien conocida como subprograma o procedimiento)
+Syntax – a set of rules that define how a program needs to be written in order to be valid; Java has its own specific syntax that we will learn;(Sintaxis es un conjunto de reglas que definen como un programa necesita ser escrito para ser valido, Java tiene su sintaxis especifica que aprenderemos)
+Keyword – a word that has a special meaning in the programming language (public, class, and many others). These words cannot be used as variable names for your own program;(Palabra clave es una palabra que tiene un significado especial en el lenguaje de programacion. Estas palabras no pueden ser usadas como nombres de variables para tu propio programa)
+Identifier or name – a word that refers to something in a program (such as a variable or a function name);(Identificador o nombre: una palabra que refiere a algo en un programa, como una variable o el nombre de una funcion)
+Comment – a textual explanation of what the code does. Java comments start with //.(Comentario: una explicacion textual de lo que el codigo hace)
+Whitespace – all characters that are not visible (space, tab, newline, etc.).(Espacio en blanco: todos los caracteres que no son visible(espacio, tabulador, nueva linea, etc)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 The Hello World program under a microscope
 The Hello World program illustrates the basic elements of Java programs. For now, we will discuss only the most important elements.
 
