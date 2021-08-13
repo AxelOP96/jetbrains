@@ -167,7 +167,7 @@ If you have already installed Java, you can run the program on your computer. If
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The basic terminology
+The basic terminology(La terminologia basica)
 Now that you have seen the result, let's learn some basic terminology and then try to understand this program.(Ahora que has visto el resultado, aprenderemos terminologia basica y luego intentaremos entender este programa)
 
 Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequence of statements, in which statements are executed in the order that they are written – from top to bottom in a sequential manner;(Un Programa es una secuencia de instrucciones que son ejecutadas una despues de otra en una forma predecible. El flujo secuencial es la mas comun y sencilla secuencia de declaraciones, en los que las declaraciones son ejecutadas en el orden en que son escritos de arriba hacia abajo en una forma secuencial.)
@@ -182,43 +182,44 @@ Whitespace – all characters that are not visible (space, tab, newline, etc.).(
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The Hello World program under a microscope
-The Hello World program illustrates the basic elements of Java programs. For now, we will discuss only the most important elements.
+The Hello World program under a microscope(El programa hola mundo bajo un microscopio)
+The Hello World program illustrates the basic elements of Java programs. For now, we will discuss only the most important elements.(El programa hola mundo ilustra los elementos basicos de los programas Jva. Por ahora, discutiremos los elementos mas importantes)
 
-1. The public class. It is the basic unit of a program. Every Java program must have at least one class. The definition of a class consists of the class keyword followed by the class name. A class can have any name, such as App, Main, or Program, but it must not start with a digit. A set of braces {...} encloses the body of a class.
+1. The public class. It is the basic unit of a program. Every Java program must have at least one class. The definition of a class consists of the class keyword followed by the class name. A class can have any name, such as App, Main, or Program, but it must not start with a digit. A set of braces {...} encloses the body of a class.(1_ La clase publica, es la unidad basica de un programa, cada programa Java tiene que tener al menos una clase. La definicion de una clase consiste de la palabra clave clase seguido por el nombre de la clase. Una clase puede tener cualquier nombre, como App, Main o Program pero no puede empezar con un digito. Un conjunto de llaves {} encierra el cuerpo de una clase.)
 
 public class Main {
     // ...
 }
-The text after // is just a comment, not a part of the program. We will learn about comments in detail in later topics.
+The text after // is just a comment, not a part of the program. We will learn about comments in detail in later topics.(El texto des pues de // es solo un comentario, no es parte del programa. Aprenderemos sobre comentarios en los siguientes temas)
 
-2. The main method. To make the program runnable, we put a method named main inside a class. It is the entry point for a Java program. Again, the braces {...} enclose the body of the method, which contains programming statements.
+2. The main method. To make the program runnable, we put a method named main inside a class. It is the entry point for a Java program. Again, the braces {...} enclose the body of the method, which contains programming statements.(2_El metodo principal, para hacer el programa ejecutable ponemos un metodo llamado main dentro de una clase. Es el punto de entrada para un programa Java. De nuevo las llaves encierran el cuerpo del metodo, que contiene las declaraciones de programacion)
 
 public static void main(String[] args) {
     // statements go here
 }
-The keywords public, static, and void will be discussed later, so just remember them for now. The name of this method (main) is predefined and should always be the same. Capitalization matters; if you name your first method like Main, MAIN or something else, the program cannot start.
+The keywords public, static, and void will be discussed later, so just remember them for now. The name of this method (main) is predefined and should always be the same. Capitalization matters; if you name your first method like Main, MAIN or something else, the program cannot start.(Las palabras clave public, static y void seran vistas mas tarde, solo recuerdalas por ahora. El nombre de este metodo, main,esta predefinido y siempre deberia ser el mismo. Las mayusculas importan, si nombras el metodo como Main, MAIN, o algo mas el programa no puede comenzar)
 
-The element String[] args represents a sequence of arguments passed to the program from the outside world. Don't worry about them right now.
+The element String[] args represents a sequence of arguments passed to the program from the outside world. Don't worry about them right now.(El elemento String[] args representa una secuencia de argumentos pasados al programa del mundo exterior)
 
-3. Printing "Hello, world!". The body of the method consists of programming statements that determine what the program should do after starting. Our program prints the string "Hello, World!" using the following statement:
+3. Printing "Hello, world!". The body of the method consists of programming statements that determine what the program should do after starting. Our program prints the string "Hello, World!" using the following statement:(3_Imprimiento "Hola, mundo!", el cuerpo del metodo consiste en declaraciones de programacion que determinan que el programa debria hacer despues de comenzar. Nuestro programa imprime el string "Hola, mundo!" usando la siguiente declaracion:)
 
-System.out.println("Hello, World!"); //  each statement has to end with ;
-This is one of the most important things to understand from the Hello World program. We invoke a special method println to display a string followed by a new line on the screen. We will often use this approach to print something of interest to the screen. The text is printed without double quotes.
+System.out.println("Hello, World!"); //  each statement has to end with ;(Cada declaracion tiene que terminar con ;)
+This is one of the most important things to understand from the Hello World program. We invoke a special method println to display a string followed by a new line on the screen. We will often use this approach to print something of interest to the screen. The text is printed without double quotes.(Esta es una de las cosas mas importantes para entender el programa hola mundo. invocamos un metodo especial println para mostrar un string seguido de una nueva linea en la pantalla, usaremos esto seguidp para imprimir algo de interes en la pantalla)
 
-Important, that "Hello, World!" is not a keyword or an identifier; it is just a text to be printed.
-Keywords
-As you can see, even a simple Java program consists of many elements, including keywords that are parts of the language. In total, Java provides more than 50 keywords which you will gradually learn on this platform. The full list is here, but do not try to remember them at this moment.
+Important, that "Hello, World!" is not a keyword or an identifier; it is just a text to be printed.(Importante, el "Hola mundo!" nos es una palabra clave ni un identificador, es solo un texto a ser impreso)
+Keywords(Palabras claves)
+As you can see, even a simple Java program consists of many elements, including keywords that are parts of the language. In total, Java provides more than 50 keywords which you will gradually learn on this platform. The full list is here, but do not try to remember them at this moment.(Como puedes ver incluso un simple programa  de Java consiste de muchos elementos, incluyendo palabras clave que son partes del lenguaje. En total, Java provee mas de 50 palabras clave que gradualmente aprenderas. La lista completa esta aqui, pero no intentes recordarla ahora mismo)
 
-Note, main is outside the given list because it is not a keyword
+Note, main is outside the given list because it is not a keyword(Nota, main esta afuera de la lista dada porque no es una palabra clave)
 Conclusion
-We have discussed the simplest program you can write in Java. It has a single class with a single main method. Every Java program must have a main method as it is the first to be executed when the program runs. Don't worry about memorizing every single term used in the topic (syntax, statement, block). These terms will reappear in further materials. Do not forget to use the provided Hello World program as a template for your own programs.
+We have discussed the simplest program you can write in Java. It has a single class with a single main method. Every Java program must have a main method as it is the first to be executed when the program runs. Don't worry about memorizing every single term used in the topic (syntax, statement, block). These terms will reappear in further materials. Do not forget to use the provided Hello World program as a template for your own programs.(Discutimos el mas simple de los programas que puedes escribir en Java. Teien una sola clase con un solo metodo. Cada programa Java debe tener un metodo principal que sera el primero en ser ejecutado cuando el programa corra. No te preocupes en memorizar cada termino usado en el tema, sintaxis, declaracion, bloque, etc. Estos terminos reapareceran en materiales posteriores. No olvides usar el programa hola mundo provisto como un template para tus propios programas) 
 
 class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---- Displaying text using println() and print()-----!>
 
@@ -2657,6 +2658,6 @@ class Main {
             }
         }
 
-        System.out.println(sum);
+        System.out.println(sum); 
     }
 } 
