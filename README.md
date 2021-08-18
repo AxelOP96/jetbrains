@@ -183,7 +183,9 @@ Identifier or name – a word that refers to something in a program (such as a v
 Comment – a textual explanation of what the code does. Java comments start with //.(Comentario: una explicacion textual de lo que el codigo hace)
 Whitespace – all characters that are not visible (space, tab, newline, etc.).(Espacio en blanco: todos los caracteres que no son visible(espacio, tabulador, nueva linea, etc)
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 The Hello World program under a microscope(El programa hola mundo bajo un microscopio)
 The Hello World program illustrates the basic elements of Java programs. For now, we will discuss only the most important elements.(El programa hola mundo ilustra los elementos basicos de los programas Jva. Por ahora, discutiremos los elementos mas importantes)
@@ -222,7 +224,10 @@ class Main {
         System.out.println("Hello, World!");
     }
 }
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!---- Displaying text using println() and print()-----!>
 
@@ -384,13 +389,18 @@ For example, if you think that eight variables are here, enter the number:(Por e
 en este caso son 5 ya que reasignar una variable cuenta como asignarla
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <!-----Commentaries -----!>
-Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to explain how and why our code works.
+Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation
+ process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to explain how and why our
+ code works.(Dentro de un programa Java, podes escribir un texto especial que va a ser iognorado por el compilador Java conocido como comentario. Los comentarios te permiten
+ excluir codigo del proceso de compilacion(Deshabilitandolo) o clarificando una parte de codigo a ti mismo o a otros desarrolladores. En nuestros materiales, usamos comentarios
+ en la teoria y la practica para explicar como y por que nuestro codigo funciona)
 
-The Java programming language supports three kinds of comments.
+The Java programming language supports three kinds of comments.(El lenguaje de progrmacion Java soporta tres tipos de comentarios.) 
 
-End-of-line comments
-The java compiler ignores any text from // to the end of the line.
+End-of-line comments(Comentarios de fin de linea)
+The java compiler ignores any text from // to the end of the line.(El compilador Java ignora cualquier texto despues de // hasta el final de la linea
 
 class Program {
     public static void main(String[] args) {
@@ -400,10 +410,11 @@ class Program {
         System.out.println("Hello, Java"); // Here can be any comment
     }
 }
-In the example above the text after // is ignored by the compiler.
+In the example above the text after // is ignored by the compiler.(En el ejemplo el texto despues de // es ignorado por el compilador)
 
-Multi-line comments
-The compiler ignores any text from /* and the nearest */. It can be used as multiple and single-line comments.
+Multi-line comments(Comentarios de multilinea)
+The compiler ignores any text from /* and the nearest */. It can be used as multiple and single-line comments.(El compilador ignora cualquier texto entre /* y */. Puede ser usado
+ como comentarios simples o multiples)
 
 class Program {
     public static void main(String[] args) {
@@ -412,7 +423,7 @@ class Program {
             a multi-line comment */
   }
 }
-You can use comments inside other comments:
+You can use comments inside other comments:(Puedes usar comentarios dentro de otros comentarios)
 
 class Program {
     public static void main(String[] args) {
@@ -422,14 +433,18 @@ class Program {
         */
     }
 }
-The part of the code above is ignored by the compiler because of /* ... */ comments.
+The part of the code above is ignored by the compiler because of /* ... */ comments.(La parte del codigo mostrado es ignorado por el compilador por los comentarios /* ... */)
 
-Java documentation comments
-The compiler ignores any text from /** to */ just like it ignores multi-line comments.
+Java documentation comments(Los comentarios de la documentacion Java)
+The compiler ignores any text from /** to */ just like it ignores multi-line comments.(El compilador ignora cualquier texto desde /** hasta */ al igual que ignora los comentarios multiples.)
 
-These kinds of comments can be used to automatically generate documentation about your source code by using the javadoc tool. Usually, these comments are placed above declarations of classes, interfaces, methods and so on. Some special labels such as @param or @return are often used for controlling the tool. However, they are optional and we will not deal with them for now. Just don't be surprised in case you see one.
+These kinds of comments can be used to automatically generate documentation about your source code by using the javadoc tool. Usually, these comments are placed above
+ declarations of classes, interfaces, methods and so on. Some special labels such as @param or @return are often used for controlling the tool. However, they are optional and we
+ will not deal with them for now. Just don't be surprised in case you see one.(Estas clases de comentarios pueden generar automaticamente documentacion sobre tu codigo fuente al
+ usar la herramienta javadoc. Usualmente estos comentarios son usados debajo de las declaraciones de clases, interfaces, metodos, etc. Algunos labels especiales como @param o
+ @return son usados a menudo para manejar la herramienta. Aunque son opcionales y nosotros no trabajaremos con ellos por ahora. Solo no te sorprendas en el caso de que veas una)
 
-See the example below.
+See the example below.(Mira el ejemplo debajo)
 
 class Program {
     /**
@@ -441,7 +456,10 @@ class Program {
         // do nothing
     }
 }
-Do not be afraid if you have not understood the documentation comments completely. This will be considered in other topics.
+Do not be afraid if you have not understood the documentation comments completely. This will be considered in other topics.(No tengas miedo si no entiendes los comentarios de
+ documentacion completamente)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---------- ----------!>
 There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to write code that is clean and easy to read? This is trickier than it may seem at the beginning, and this is quite important: in real life, programming is a process that involves a lot of people that work together. In fact, you often spend more time reading code than writing it. Even when you're working alone and writing a program "for yourself", after a while, it may become difficult for you to understand your own program if it's badly written.
