@@ -15,7 +15,10 @@ Practicas de java: Curso de JAVA en ingles y posteriormente traducido por mi.
 *Build an efficient web application with SpringBoot.
 *Work with data formats like JSON and XML.
 *Work with databases.
+
+
 (Aprende Java mientras construyes aplicaciones reales funcionales. Puedes elegir un proyecto de acuerdo a tu nivel y tendras todo el conocimiento para completarlo. Completar el camino completo te preparará para manejar tareas varias relacionadas a aplicaciones de escritorio o desarrollo web en Java. Mientras progresas a través de diferentes proyectos de este camino aprenderas: a entender la sintaxis en Java y escribir un codigo eficiente y leible; a trabajar con herraminetas profesionales de desarrollo y GitHub; a aplicar los principios de programacion orientada a objetos usada en desarrollo comercial; a simplificar el diseño de tu aplicacion con programcion funcional; a usar procesamiento multinucleo para optimizar la velocidad de tu app; a usar la libreria swing para desarrollo de escritorio; a crear una aplicacion web eficiente con springboot; a trabajar con formatos de data como JSONy XML; y a trabajar con bases de datos) 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -262,15 +265,15 @@ Pay attention to the spaces between words. We pass them to methods for printing.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Printing numbers and characters
-Both methods println and print allow a program to print not only strings and characters, but also numbers.
+Printing numbers and characters(Imprimiendo numeros y caracteres)
+Both methods println and print allow a program to print not only strings and characters, but also numbers.(Ambos metodos println y print permiten al promgrama no solo imprimir strings y caracteres sino tambien numeros.)
 
-Let's print two secret codes.
+Let's print two secret codes.(Imprimamos dos codigos secretos)
 
-System.out.print(108);   // printing a number
-System.out.print('c');   // printing a character that represents a letter
-System.out.print("Q");   // printing a string
-System.out.println('3'); // printing a character that represents a digit
+System.out.print(108);   // printing a number(Imprimiendo un numero)
+System.out.print('c');   // printing a character that represents a letter(Imprimiendo un caracter que representa una letra)
+System.out.print("Q");   // printing a string(Imprimiendo un string)
+System.out.println('3'); // printing a character that represents a digit(Imprimiendo un caracter que representa un digito)
 
 System.out.print(22);
 System.out.print('E');
@@ -280,83 +283,108 @@ It outputs:
 
 108cQ3
 22E81
-As is the case with strings, none of the characters contain quotes.
+As is the case with strings, none of the characters contain quotes.(Como ocurre en el caso con los strings ninguno de los caracteres contiene comillas)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <!----- Declaring and initializing-----!>
 
-A variable is a placeholder for storing a value of a particular type: a string, a number, or something else. Every variable has a name (also known as an identifier) to distinguish it from others. Before you start using a variable, you must declare it.
+A variable is a placeholder for storing a value of a particular type: a string, a number, or something else. Every variable has a name (also known as an identifier) to distinguish it from others. Before you start using a variable, you must declare it.(Una variable en un lugar para almacenar un valor de un tipo particular: un string, un numero o algo mas. Cada variable tiene un nombre, tambien conocido como un identificador, para distinguirlo de otros. Antes de usar una variable debes declararla)
 
-The general form of declaration is the following:
+The general form of declaration is the following:(La forma general de declaracion es la siguiente:)
 
-DataType variableName = initialization;
-The left part of this statement describes the variable, and the right part describes something that is assigned to it.
+DataType variableName = initialization;(TipoDeDato NombreDeLaVariable = inicializacion;)
+The left part of this statement describes the variable, and the right part describes something that is assigned to it.(La parte de la izquierda de la sentencia describe la
+ variable y la derecha describe algo que es asignado a ella.)
 
-The type (or data type) of a variable determines what possible operations can be performed on the variable and which values can be stored in it. Here we use a non-existing data type (DataType) to demonstrate the general form of declaration.
-The name (or identifier) distinguishes the variable from others. The name of a variable cannot start with a digit; it usually starts with a letter. Always try to choose meaningful and readable names for variables to make your code easy to understand.
-The assignment operator denoted as = is used to assign a single value or a result of an expression to a variable.
-The initialization is a value or a result of an expression that is assigned to the variable.
-According to this declaration, we can declare a variable of the type String and assign the word "java" to it:
+The type (or data type) of a variable determines what possible operations can be performed on the variable and which values can be stored in it. Here we use a non-existing data
+ type (DataType) to demonstrate the general form of declaration.(El tipo, o tipo de dato, de una variable determina que operaciones posibles pueden ser realizadas con una
+ variable y que valores pueden ser almacenadas en el. Usamos aqui un tipo de dato no existente para demostrar la forma general de declaracion)
+The name (or identifier) distinguishes the variable from others. The name of a variable cannot start with a digit; it usually starts with a letter. Always try to choose
+ meaningful and readable names for variables to make your code easy to understand.(El nombre o identificador distingue la variable de otras. El nombre de una variable no puede
+ comenzar con un digito; usualmente comienza con una letra. Siempre trata de elegir nombre leibles y que hagan tu codigo mas facil de entender)
+The assignment operator denoted as = is used to assign a single value or a result of an expression to a variable.(El operador de asignacion es = es usado para asignar un simple
+ valor o un resultado de una expresion a una variable)
+The initialization is a value or a result of an expression that is assigned to the variable.(La inicializacion es una valor o un resultado de una expresion que esta asignado a
+una variable)
+According to this declaration, we can declare a variable of the type String and assign the word "java" to it:(De acuerdo a esta declaracion podemos declarar una variable del tipo
+ string y asignar la palabra "Java" a ella)
 
 String language = "java";
-We can also declare a variable of the type int to store an integer number:
+We can also declare a variable of the type int to store an integer number:(Tambien podemos declarar una variable del tipo int para almacenar un numero entero:)
 
 int numberOfApples = 5;
 
-The case in the name of a variable makes a difference: language is not the same as Language.
-Variables can store not only strings and numbers, but also characters and other data types which we will learn about later in the next topics.
+The case in the name of a variable makes a difference: language is not the same as Language.(Si esta en minuscula o mayuscula en el nombre de una variable hace una diferencia:
+languaje no es lo mismo que Lenguaje)
+Variables can store not only strings and numbers, but also characters and other data types which we will learn about later in the next topics.(Variables pueden almacenar no solo strings y numeros, sino tambien caracteres y otro tipo de datos que aprenderemos en los siguientes temas)
 
-Accessing the value of a variable
-Once a variable has been declared, its value can be accessed and modified using the name. In the example below, we declare a variable and then print it:
+Accessing the value of a variable(Accediendo al valor de una variable)
+Once a variable has been declared, its value can be accessed and modified using the name. In the example below, we declare a variable and then print it:(Una vez que una variable
+ ha sido declarada su valor puede ser accesado y modificado usando su nombre. E n el ejemplo mas debajo declaramos una varible y luego la imprimimos)
 
 String dayOfWeek = "Monday";
 System.out.println(dayOfWeek); // Monday
-It is also possible to assign a value of one variable to another one:
+It is also possible to assign a value of one variable to another one:(Tambien es posible asignar un valor de una variable a otra)
 
 int one = 1;
 int num = one;
 System.out.println(num); // 1
-One important feature of variables is that they can be changed. You don't need to declare a variable again to change its value; just assign a new value to it using the = operator.
+One important feature of variables is that they can be changed. You don't need to declare a variable again to change its value; just assign a new value to it using the =
+ operator.(Una herramienta importante de las variables es que pueden ser cambiadas. No necesitas declarar una variable otra vez para cambiar su valor; Solo asigna un nuevo valor
+ a ella usando el operador =)
 
-Let's declare a variable named dayOfWeek and print its value before and after changing:
+Let's declare a variable named dayOfWeek and print its value before and after changing:(Declaremos una variable llamada DiaDeLaSemana e imprimamos su valor antes y despues de
+ cambiar)
 
 String dayOfWeek = "Monday";
 System.out.println(dayOfWeek); // Monday
 
 dayOfWeek = "Tuesday";
 System.out.println(dayOfWeek); // Tuesday
-There is one restriction for variables: you can only assign a value of the same type as the type of the initial variable. So, the following code is not correct:
+There is one restriction for variables: you can only assign a value of the same type as the type of the initial variable. So, the following code is not correct:(Solo hay una
+ restriccion para las variables: solo puedes asignar un valor del mismo tipo que el tipo inicial de la variable. Por lo que el siguiente codigo no es correcto:)
 
 int number = 10;
 number = 11; // ok
 number = "twelve"; // it does not work!
-Alternative forms of declaration
-There are several alternative forms of declaration which are less commonly used in practice. Here are several of them in particular examples.
+Alternative forms of declaration(Formas alternativas de declaracion)
+There are several alternative forms of declaration which are less commonly used in practice. Here are several of them in particular examples.(Hay varias formas alternativas de
+ declaracion que son menos usadas en la practica. Aqui hay algunas de ellas en ejemplos particulares.)
 
-Declaring several variables of the same type as a single statement:
+Declaring several variables of the same type as a single statement:(Declarando varias variables del mismo tipo como una sola declaracion:) 
 String language = "java", version = "8 or newer";
-Separating declaration and initialization into statements:
+
+Separating declaration and initialization into statements:(Separando declaracion e inicializacion en sentencias:)
 int age; // declaration
 age = 35; // initialization 
-However, as we have already noted, these forms are rarely used.
+However, as we have already noted, these forms are rarely used.(Aunque estas formas son usadas raramente)
 
-Type inference
-Since Java 10, you can write var instead of a specific type to force automatic type inference based on the type of assigned value:
+Type inference(Inferencia de tipos)
+Since Java 10, you can write var instead of a specific type to force automatic type inference based on the type of assigned value:(Desde Java 10, puedes escribir var en vez de el tipo especifico para forzar automaticamente la inferencia de tipos basada en el el tipo de valor asignado:)
 
 var variableName = initialization;
-Here are two examples below:
+Here are two examples below:(Aqui hay dos ejemplos debajo:)
 
 var language = "Java"; // String
 var version = 10; // int
-This feature can be a bit controversial: on the one hand, it allows your code to be more concise. On the other hand, since it doesn't indicate the type explicitly, it may affect the code readability in a bad way. For now, it's enough to understand the basic idea. We will not use type inference in our theory so that our educational platform is suitable for people who use earlier versions of Java. But if you would like to practice it, you may use type inference in our exercises as they fully support Java 10.
+This feature can be a bit controversial: on the one hand, it allows your code to be more concise. On the other hand, since it doesn't indicate the type explicitly, it may affect
+ the code readability in a bad way. For now, it's enough to understand the basic idea. We will not use type inference in our theory so that our educational platform is suitable
+ for people who use earlier versions of Java. But if you would like to practice it, you may use type inference in our exercises as they fully support Java 10.(Esta herramienta
+ `puede ser algo controversial: por un lado, permite que tu codigo sea mas conciso. Por el otro como no indica el tipo explicitamente puede afectar a tu lectura de codigo en una
+ mala manera. Por ahora es suficiente que entiendas la idea basica. No usaremos la inferencia de tipos en la teoria por lo que esto ayuda a la gente con versiones anteriores de
+ Java. Pero si quieres practicarlo, puedes usar inferencia de tipos en nuestro ejercicios ya que soportan completamente Java 10)
 
 int i = 0, j = 0, k = 0;
 String s = "s", str = "str";
 
-Enter the number of declared variables in the code fragment.
+Enter the number of declared variables in the code fragment.(Ingresa el numero de variables declaradas en el siguiente fragmento de codigo)
 
-For example, if you think that eight variables are here, enter the number:
+For example, if you think that eight variables are here, enter the number:(Por ejemplo si piensas que son ocho variables ingresa el numero)
 en este caso son 5 ya que reasignar una variable cuenta como asignarla
 
-<!----- -----!>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-----Commentaries -----!>
 Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to explain how and why our code works.
 
 The Java programming language supports three kinds of comments.
