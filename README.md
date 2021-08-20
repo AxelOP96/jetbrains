@@ -462,27 +462,48 @@ Do not be afraid if you have not understood the documentation comments completel
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---------- ----------!>
-There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to write code that is clean and easy to read? This is trickier than it may seem at the beginning, and this is quite important: in real life, programming is a process that involves a lot of people that work together. In fact, you often spend more time reading code than writing it. Even when you're working alone and writing a program "for yourself", after a while, it may become difficult for you to understand your own program if it's badly written.(Hay una pregunta que surge cuando te mueves de programas simples a mas complicados: como escribir codigo que sea limpio y facil de leer. Es mas dificil de lo que parece al principio, y es muy importante: en la vida real programar es un proceso que involucra mucha gente que trabaja junta. De hecho, a menudo pasas mas tiempo leyendo codigo que escribiendolo. Incluso cuando trabajas solo y escribis un programa para vos solo, despues de un rato puede ser dificil para vos entender tu propio programa si esta mal escrito
+There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to write code that is clean and easy to read? This is trickier
+ than it may seem at the beginning, and this is quite important: in real life, programming is a process that involves a lot of people that work together. In fact, you often spend
+ more time reading code than writing it. Even when you're working alone and writing a program "for yourself", after a while, it may become difficult for you to understand your
+ own program if it's badly written.(Hay una pregunta que surge cuando te mueves de programas simples a mas complicados: como escribir codigo que sea limpio y facil de leer. Es
+ mas dificil de lo que parece al principio, y es muy importante: en la vida real programar es un proceso que involucra mucha gente que trabaja junta. De hecho, a menudo pasas mas
+ tiempo leyendo codigo que escribiendolo. Incluso cuando trabajas solo y escribis un programa para vos solo, despues de un rato puede ser dificil para vos entender tu propio
+ programa si esta mal escrito)
 
-That is why you need to follow common best practices concerning programming style. This way, other programmers and yourself could read your code easily. Writing good code may help you get your first job and make a good impression on your colleagues.
+That is why you need to follow common best practices concerning programming style. This way, other programmers and yourself could read your code easily. Writing good code may
+ help you get your first job and make a good impression on your colleagues.(Por esto necesitas seguir las mejores practicas comunes concernientes al estilo de programacion. De
+ esta forma otros programadores y vos mismo pueden leer el codigo facilmente. Escribir buuen codigo puede ayudarte a obtener tu primer trabajo y causar una buena impresion en tus
+ colegas)
 
 Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread. – The Tidyverse Style Guide by Hadley Wickham
-Java Conventions
-A list of recommendations on how to write code for some particular language is usually called coding style guide or style conventions. The conventions help developers standardize and support well-readable code. They are more like recommendations than strict rules, but by following them a programmer creates code that is clean and consistent so that other developers will be happy to work with it.
+Java Conventions(Convenciones de Java)
+A list of recommendations on how to write code for some particular language is usually called coding style guide or style conventions. The conventions help developers standardize
+ and support well-readable code. They are more like recommendations than strict rules, but by following them a programmer creates code that is clean and consistent so that other
+ developers will be happy to work with it.(Una lista de recomendaciones de como escribir codigo para un lenguaje particular es usualmente llamado guia de estilos de codigo o
+ convenciones de estilo. Las convenciones ayudan a los desarrolladores a estandarizar y soportar el codigo bien leible. Hay mas recomendaciones que reglas estrictas, pero por
+ seguirlas un programador crea codigo que es limpio y consistente para que otros desarrolladores sean felices de trabajar con el)
 
 In most cases, companies and individual developers do not create their own style conventions. There are two generally accepted Java conventions that are used all over the world:
+(en la mayoria de los casos las compañias y desarrolladores individuales no crean sus propias convenciones de estilos. Hay dos convenciones de Java generalmente aceptadas que son usadas por todo el mundo:)
 
-Oracle Code Conventions
-Google Style Guide
-Sometimes they could be modified or extended by a particular company to meet their needs.
+Oracle Code Conventions(Convenciones de codigo Oracle)
+Google Style Guide(Guia de estilos de Google)
+Sometimes they could be modified or extended by a particular company to meet their needs.(A veces ellas pueden ser modificadas o extendidas por una compañia particular para
+ conocer sus necesidades)
 
-In all our code examples and exercises, we will follow the Oracle Code Conventions and we urge you to do the same while learning here. After completing the course, you can follow any conventions you want. Actually, it doesn't really matter which one to follow, the main challenge is to be consistent across your code.
-There is no need to learn all the conventions at once: just remember to open them from time to time after learning some new syntactic concepts. We will provide the information throughout the course when needed.
+In all our code examples and exercises, we will follow the Oracle Code Conventions and we urge you to do the same while learning here. After completing the course, you can follow
+ any conventions you want. Actually, it doesn't really matter which one to follow, the main challenge is to be consistent across your code.
+There is no need to learn all the conventions at once: just remember to open them from time to time after learning some new syntactic concepts. We will provide the information
+ throughout the course when needed.(En todos nuestros ejemplos de codigo y ejercicios, seguimos las convenciones del codigo Oracle y nos urge que hagas lo mismo mientras aprendes
+ aqui. Luego de completar el curso puedes seguir las convenciones que quieras. Actualmente no importa cual sigas the desafio principal es que seas consistente a lo largo de tu
+ codigo)
 
-Now let's look at some of the most basic Java conventions according to Oracle Code Conventions.
+Now let's look at some of the most basic Java conventions according to Oracle Code Conventions.(Ahora miremos algunas de las convenciones mas basicas de Java de acuerdo a las convenciones de codigo de Oracle)
 
-The number of spaces
-The first convention is to use 4 spaces as the unit of indentation in the whole program code. You have already seen our code examples before and you might note that we used this value there.
+The number of spaces(El numero es espacios)
+The first convention is to use 4 spaces as the unit of indentation in the whole program code. You have already seen our code examples before and you might note that we used this
+ value there.(La primera convencion es usar 4 espacios como unidad de identacion en todo el programa de codigo. Ya has visto ejemplos de codigo antes y puedes haber notado que
+ usamos estos valores aqui)
 
 Good:
 
@@ -502,15 +523,20 @@ public class NumberOfSpacesExample {
    System.out.println("I'm a Java program.");
  }
 }
-As you can see, the second code example looks ugly and requires some effort to be read.
+As you can see, the second code example looks ugly and requires some effort to be read.(Como puedes ver el segundo ejemplo se ve horrible y requiere algun esfuerzo para la
+ lectura)
 
-Sometimes tabulation is used to create an indentation. However, tab may correspond to 8 spaces instead of 4 in some IDEs, that is why we recommend you stick to spaces in this course.
-The location of curly braces
-Some time ago, developers were arguing a lot about where to put opening and closing curly braces in C-like programming languages. The next convention describes what to do in Java:
+Sometimes tabulation is used to create an indentation. However, tab may correspond to 8 spaces instead of 4 in some IDEs, that is why we recommend you stick to spaces in this
+ course.(Algunas veces la tabulacion es usada para crear una identacion. Aunque tab puede corresponder a 8 espacios en vez de 4 en algunos ides, esto es por lo que recomendamos
+ que utilices estos espacios en este curso)
+The location of curly braces(La localizacion de las llaves)
+Some time ago, developers were arguing a lot about where to put opening and closing curly braces in C-like programming languages. The next convention describes what to do in
+ Java:(Algun tiempo atras los desarrolladores discutian mucho sobre donde abrir y cerrar llaves en lenguajes de programacion como C. La siguiente convencion describe que hacer en
+ Java)
 
-Put the opening curly brace at the end of the line where the block begins.
-Put the closing curly brace at the beginning of the next line.
-There are two examples below which illustrate these rules.
+Put the opening curly brace at the end of the line where the block begins.(Poner la llave de apertura al final de la linea donde comienza el bloque)
+Put the closing curly brace at the beginning of the next line.(Poner ña llave de cierre al principio de la proxima linea)
+There are two examples below which illustrate these rules.(Aqui hay dos ejemplos de lo que ilustran estas reglas)
 
 Good:
 
@@ -531,12 +557,14 @@ public class NumberOfSpacesExample
         System.out.println("I'm a Java program.");
     }
 }
-Here, the second code example doesn't look ugly, but it is just not a Java way. Most of the common conventions follow the first example.
+Here, the second code example doesn't look ugly, but it is just not a Java way. Most of the common conventions follow the first example.(aqui el segundo ejemplo de codigo no se
+ ve horrible pero no es una forma en Java. La mayoria de las convenciones comunes siguen el primer ejemplo)
 
-Avoid extra spaces
-Sometimes you may add some spaces even if you don't really need them. This will reduce the readability of your code.
+Avoid extra spaces(Evita espacios extra)
+Sometimes you may add some spaces even if you don't really need them. This will reduce the readability of your code.(A veces puedes añadir algunos espacios incluso si no son
+ necesarios. Esto reducira la buena lectura de tu codigo)
 
-Avoid extra spaces within parentheses.
+Avoid extra spaces within parentheses.(Evita espacios extra con parentesis)
 Good:
 
 System.out.println("Hello!");
@@ -557,15 +585,32 @@ System.out.println("No extra spaces");
 Bad:
 
 System.out.println("It has an extra space") ;
-The length of a line
-The last recommendation concerns the maximum length of a line. Oracle Code Conventions propose avoiding lines longer than 80 characters. Plenty of developers consider this restriction as outdated since modern monitors can easily display longer lines, whereas others would go on following this rule, which is handy, for example, if laptops are used.
+The length of a line(La longitud de una linea)
+The last recommendation concerns the maximum length of a line. Oracle Code Conventions propose avoiding lines longer than 80 characters. Plenty of developers consider this
+ restriction as outdated since modern monitors can easily display longer lines, whereas others would go on following this rule, which is handy, for example, if laptops are used.
+(La ultima recomendacion concierne a la longitud maxima de una linea. Las convenciones de codiog de Oracle proponen evitar lineas mayores que 80 caracteres. Muchos
+ desarrolladores consideran esto como una restriccion antigua ya que los monitores modernos pueden mostrar facilmente lineas mas largas) 
 
-Keeping ourselves off this dispute, we will use 80 characters in the course to avoid scrollbars in our examples and web code editor. We recommend that you do the same while learning here, but keep in mind that you can violate this limitation after you start working on a real project or learning elsewhere.
+Keeping ourselves off this dispute, we will use 80 characters in the course to avoid scrollbars in our examples and web code editor. We recommend that you do the same while
+ learning here, but keep in mind that you can violate this limitation after you start working on a real project or learning elsewhere.(Manteniendonos fuera de la disputa,
+ usaremos 80 caracteres en el curso para evitar scrollbars en nuestros ejemplos y en nuestro editor web de codigo. Recomendamos que uses el mismo mientras aprendes aqui que 
+puedes violar esta limitacion despues de que empieces a trabajar en un proyecto real o aprendiendo en otra parte)
 
-Other popular limit values are 100, 120, and sometimes even 140 characters.
+Other popular limit values are 100, 120, and sometimes even 140 characters.(Otros valores limites populares son 100, 120 y a veces incluso 140 caracteres)
 
 Conclusion
-Style guides provide the conventions to help create well-readable and consistent code. For Java, the two most popular ones are Oracle Code Conventions and Google style guide. One of their main objectives is to provide an effective way for developers to work on the code together. Because of that, it is not as important to strictly follow one of the existing style guides as to stay consistent within the project. Later on, you will learn a lot of things about Java and become a skillful programmer, but maintaining the code style will always remain important. Do not worry, though: you do not need to learn all the conventions at once. In all the following topics, we will follow the Oracle Code Conventions and encourage you to do it with us!
+Style guides provide the conventions to help create well-readable and consistent code. For Java, the two most popular ones are Oracle Code Conventions and Google style guide.
+ One of their main objectives is to provide an effective way for developers to work on the code together. Because of that, it is not as important to strictly follow one of the
+ existing style guides as to stay consistent within the project. Later on, you will learn a lot of things about Java and become a skillful programmer, but maintaining the code
+ style will always remain important. Do not worry, though: you do not need to learn all the conventions at once. In all the following topics, we will follow the Oracle Code
+ Conventions and encourage you to do it with us!(Las guias de estilos proveen las convenciones para ayudar a crear codigo consistente y bien leible. Para Java los mas populares
+ son las convenciones de codigo Oracle y la guia de estilo de Google. Uno de sus principales objetivos es proveer una forma efectiva para desarrolladores para trabajar en el
+ codigo juntos. Por ello, no es tan importante seguir estrictamente una de las guias de estilo existente para permanecer consistemte con el proyecto. Mas tarde aprenderas muchas
+ cosas sobre Java y te volveras un programador habilidoso pero mantener las guias de estilo siempre permaneceran imporatantes. No te preocupes, piensa: No necesitas aprender
+ todas las convenciones a la primera. E n los siguientes temas seguiremos las convenciones de codigo Oracle y te alentaremos a que lo hagas con nosotros) 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <!---------- Why is naming important?---------!>
 
 As you may know, every variable has a name that uniquely identifies it among other variables. Giving a good name to a variable may not be as simple as it seems. Experienced programmers put a lot of care into naming to make their programs easy to understand. It is important because programmers spend a lot of their time getting through the code written by other programmers. If variables have bad names, even your own code will seem unclear to you in a few months.
