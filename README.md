@@ -607,142 +607,197 @@ Style guides provide the conventions to help create well-readable and consistent
  son las convenciones de codigo Oracle y la guia de estilo de Google. Uno de sus principales objetivos es proveer una forma efectiva para desarrolladores para trabajar en el
  codigo juntos. Por ello, no es tan importante seguir estrictamente una de las guias de estilo existente para permanecer consistemte con el proyecto. Mas tarde aprenderas muchas
  cosas sobre Java y te volveras un programador habilidoso pero mantener las guias de estilo siempre permaneceran imporatantes. No te preocupes, piensa: No necesitas aprender
- todas las convenciones a la primera. E n los siguientes temas seguiremos las convenciones de codigo Oracle y te alentaremos a que lo hagas con nosotros) 
+ todas las convenciones a la primera. En los siguientes temas seguiremos las convenciones de codigo Oracle y te alentaremos a que lo hagas con nosotros) 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---------- Why is naming important?---------!>
 
-As you may know, every variable has a name that uniquely identifies it among other variables. Giving a good name to a variable may not be as simple as it seems. Experienced programmers put a lot of care into naming to make their programs easy to understand. It is important because programmers spend a lot of their time getting through the code written by other programmers. If variables have bad names, even your own code will seem unclear to you in a few months.
+As you may know, every variable has a name that uniquely identifies it among other variables. Giving a good name to a variable may not be as simple as it seems. Experienced
+ programmers put a lot of care into naming to make their programs easy to understand. It is important because programmers spend a lot of their time getting through the code
+ written by other programmers. If variables have bad names, even your own code will seem unclear to you in a few months.(Como puedes saber  cada variable tiene un nombre que lo
+ identifica entre las otras variables. Darles  un buen nombre a la variable puede no ser tan simple como parece. Experimentados programadores ponen mucho cuidado en nombrar sus
+ programas para que sean faciles de entender. Es importante porque los programadores pasan mucho de su tiempo en el codigo escrito por otros programadores. Si las variables
+ tienen malos nombres, incluso tu codigo pude no ser tan bueno en un par de meses)  
 
-Always try to give descriptive and concise names to all variables. As a result, any programmer will enjoy your code for a long time.
+Always try to give descriptive and concise names to all variables. As a result, any programmer will enjoy your code for a long time.(Siempre trata de dar nombres concisos y
+ descriptivos a todas las variables. Como resultado cualquier programador disfrutara tu codigo por mucho tiempo)
 
-In addition, there are two sets of rules that restrict the possible names for variables.
+In addition, there are two sets of rules that restrict the possible names for variables.(En adicion, hay dos conjuntos de reglas que restringen los posibles nombres para
+ variables)
 
-Rules for naming variables
-Java has some rules for naming variables:
+Rules for naming variables(Reglas para nombrar variables)
+Java has some rules for naming variables:(Java tiene algunas reglas para nombrar variables:)
 
-names are case-sensitive;
-a name can include Unicode letters, digits, and two special characters ($, _);
-a name cannot start with a digit;
-a name must not be a keyword (class, static, int are illegal names).
-Based on these rules, you may conclude that whitespaces are not allowed in the name of a variable.
+names are case-sensitive; (Los nombres son case-sensitive es decir que cambian si son minusculas o mayusculas)
+a name can include Unicode letters, digits, and two special characters ($, _);(Un nombre puede incluir letras unicode, digitos y dos caracteres especiales, ~ y _)
+a name cannot start with a digit;(Un nombre no puede empezar con un digito)
+a name must not be a keyword (class, static, int are illegal names).(Un nombre no debes ser una palabra clave, como class, static, int ya que son nombres ilegales)
+Based on these rules, you may conclude that whitespaces are not allowed in the name of a variable.(Basado en estas reglas puedes concluir que los espacios en blanco no estan
+permitidos en el nombre de una variable)
 
-It is important not to break these rules; otherwise, the program will not work.
-Here are some valid names of variables:
+It is important not to break these rules; otherwise, the program will not work.(Es importante no romper estas reglas)
+Here are some valid names of variables:(Aqui hay varios nombres validos de variables)
 
 number, $ident, bigValue, _val, abc, k, var
-Note that to keep backward compatibility the word var can be used as a variable name even after Java 10 was released.
-And here are some invalid ones:
+Note that to keep backward compatibility the word var can be used as a variable name even after Java 10 was released.(Nota que que para mantener compatibilidad con versiones
+ anteriores var puede ser usado como nombre luego de ser liberado Java 10)
+And here are some invalid ones:(Y aqui hay varios invalidos)
 
 @ab, 1c, !ab, class
-Since Java 9 the single character _ is an invalid name for a variable, but _a and __ (double _ ) are legal names.
+Since Java 9 the single character _ is an invalid name for a variable, but _a and __ (double _ ) are legal names.(Desde Java 9 el caracter _ es un nombre invalido para una
+ variable pero _a y __ son nombres legales) 
 
-Naming conventions for variables
-Also, there are the following conventions for naming variables:
+Naming conventions for variables(Convenciones para nombrar variables)
+Also, there are the following conventions for naming variables:(Tambien hay las siguientes convenciones para nombrar variables:)
 
-if a variable name is a single word it should be in lowercase (for instance: number, price);
-if a variable name includes multiple words it should be in lowerCamelCase, i.e. the first word should be in lowercase and each word after the first should have its first letter written in uppercase (for instance: numberOfCoins);
-variable names should not start with _ and $ characters, although they are allowed;
-choose a name that makes sense, e.g. score makes more sense than s, although they are both valid.
-These conventions are optional, but it is strongly recommended to follow them. As we mentioned at the beginning of this lesson, they make your code more readable for you and other Java programmers.
+if a variable name is a single word it should be in lowercase (for instance: number, price);(Si el nombre de una variable es una sola palabra deberia estar en minuscula)
+if a variable name includes multiple words it should be in lowerCamelCase, i.e. the first word should be in lowercase and each word after the first should have its first letter
+ written in uppercase (for instance: numberOfCoins);(Si el nombre de una variable incluye multiples palabras deberia estar en camelCase, es decir la primer palabra en minuscula
+ y cada palabra despues de ella deberia tener la primera letra en mayuscula)
+variable names should not start with _ and $ characters, although they are allowed;(Los nombres de las variables no deberian empezar con _ y ~aunque esten permitidos)
+choose a name that makes sense, e.g. score makes more sense than s, although they are both valid.(Elige  un nombre que tenga sentido)
+These conventions are optional, but it is strongly recommended to follow them. As we mentioned at the beginning of this lesson, they make your code more readable for you and
+ other Java programmers.(Estas convenciones son opcionales, pero es fuertemente recomendado seguirlas. Como mencionamos al principio de esta leccion, van a hacer tu codigo mas
+ leible para ti y otros programadores Java)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!----------Theory: Scanning the input-----------!>
-The standard input is a stream of data going into a program. It is supported by the operating system. By default, the standard input obtains data from the keyboard input but it's possible to redirect it from a file.
+The standard input is a stream of data going into a program. It is supported by the operating system. By default, the standard input obtains data from the keyboard input but it's
+ possible to redirect it from a file.(El estandar de ingreso de informacion es una corriente de datos yaendo a un programa. Es soportado por el sistema operativo. Por defecto,el
+ ingreso estandar obtiene data del ingreso por teclado pero es posible redirigirlo de un archivo)
 
-Actually, not all programs need to use the standard input. But we will often use it here to help you master your programming skills! The typical way to solve programming problems is the following:
+Actually, not all programs need to use the standard input. But we will often use it here to help you master your programming skills! The typical way to solve programming problems
+ is the following:(Actualmete no todos los programas necesitan usar el ingreso estandar. Pero lo usaremos seguido para ayudarte a dominar tus habilidades de programacion)
 
-Read data from the standard input (System.in);
-Process data to obtain a result;
-Output the result to the standard output (System.out).
-This type of code challenge can be easily tested by different formats of input data, and for this reason, we will use them a lot.
+Read data from the standard input (System.in);(Lee datos del ingreso estandar [System.in])
+Process data to obtain a result;(Procesa datos para obtener resultados)
+Output the result to the standard output (System.out).(Muestra el resultado del egreso de informacion estandar [System.out])
+This type of code challenge can be easily tested by different formats of input data, and for this reason, we will use them a lot.(Este tipo de desafio de codigo puede ser
+ facilmente testeado por diferentes formatos de ingreso de datos y por esta razon lo usaremos mucho)
 
-Reading data with a scanner
-The simplest way to obtain data from the standard input is to use the standard class Scanner. It allows a program to read values of different types (string, numbers, etc) from the standard input. In this topic, we will consider reading data from the input.
+Reading data with a scanner(Leer datos con un scanner)
+The simplest way to obtain data from the standard input is to use the standard class Scanner. It allows a program to read values of different types (string, numbers, etc) from
+ the standard input. In this topic, we will consider reading data from the input.(La manera mas facil para obtener datos de un ingreso estandar es usar la clase estandar Scanner.
+ Permite a un programa leer valores de distintos tipos, como strings, numeros, etc, de el ingreso estandar)
 
-To use this class you should add the following import statement to the top of your file with the source code.
+To use this class you should add the following import statement to the top of your file with the source code.(Para usar esta clase deberias agregar la siguiente sentencia de
+ importacion arriba de tu archivo con el codigo fuente) 
 
 import java.util.Scanner;
-Then you add the following construction after the import:
+Then you add the following construction after the import:(Despues agregas la siguiente construccion despues de importar)
 
 Scanner scanner = new Scanner(System.in);
-With this line, we create an object of Scanner class, that enables us to use its methods. We will learn more about creating objects in other topics. System.in indicates that the program will read text that you type in the standard input. For now, you will always require this line exactly.
+With this line, we create an object of Scanner class, that enables us to use its methods. We will learn more about creating objects in other topics. System.in indicates that the
+ program will read text that you type in the standard input. For now, you will always require this line exactly.(Con esta linea creamos un objeto de la clase Scanner, que nos
+ permite usar sus metodos. Aprenderemos mas sobre crear objetos en otros temas. System.in nos indica que el programa leera lo que escribas en el estandar de ingreso. Por ahora
+ siempre requeriras usar esta linea exactamente)
 
-There are two ways to read strings with a Scanner class. If your input is an integer number or a single word, you can read the data using next() method. As an example, the following code fragment reads the user’s name and prints hello message:
+There are two ways to read strings with a Scanner class. If your input is an integer number or a single word, you can read the data using next() method. As an example, the 
+following code fragment reads the user’s name and prints hello message:(Hay dos maneras de leer strings con una clase Scanner. Si tu estandar de ingreso es un numero entero o una
+ sola palabra, puedes leer los datos usando el metodo next(). Como ejemplo el siguiente fragmento de codigo lee el nombre de usuario e imprime el mensaje hola)
 
 String name = scanner.next();
 
 System.out.println("Hello, " + name + "!");
-For instance, the user's name is James. The output of the program will be the following:
+For instance, the user's name is James. The output of the program will be the following:(Por ejemplo si el usuario se llama James, la salida del programa sera la siguiente:)
 
 Hello, James!
-If the user's input is an integer number like 123, the program will output this number. Note that the next() method will store 123 or another integer number as a string, even if we know that this string consists of a number.
+If the user's input is an integer number like 123, the program will output this number. Note that the next() method will store 123 or another integer number as a string, even if
+ we know that this string consists of a number.(Si el ingreso del usuario es un numero entero como 123, el programa imprimira este numero. Nota que el metodo next() almacenara
+ 123 u otro numero entero como string  incluso si sabemos que este string consiste en un numero) 
 
 Hello, 123!
-There are more specialized methods for reading other types of input values. In this topic, we only consider reading strings.
-But, if the user prints a compound name like Erich Maria, the program will output only the first word:
+There are more specialized methods for reading other types of input values. In this topic, we only consider reading strings.(Hay mas metodos especializados para leer otros tipos
+ de valores de ingreso. En este tema solo consideraremos leer strings)
+But, if the user prints a compound name like Erich Maria, the program will output only the first word:(Pero si el usuario imprime un nombre compuesto como Eric Maria, el programa
+ solo imprimira la primera palabra)
 
 Hello, Erich!
-In this case, you'll need another method, a nextLine() method, which reads and outputs the whole line:
+In this case, you'll need another method, a nextLine() method, which reads and outputs the whole line:(En este caso necesitaras otro metodo, un metodo nextLine() que lee e
+ imprime la linea entera)
 
 Hello, Erich Maria!
 As you may notice, the next() method reads one word only and doesn't include any whitespace. By contrast, the nextLine() method includes all space characters it encounters.
+(Como puedes notar el metodo next() lee una sola palabra y no incluye espacios, en cambio nextLine() incluye todos los espacios que encuentre)
 
-Note that in Java whitespace includes not only the space character, but mostly everything that looks empty when printed: a tab, the newline character, and other non-printing characters.
-In this article, we are dealing with space and newline characters: technically, we produce a corresponding character when pressing Enter and starting a new line. The term "whitespace" is used to refer to either of them. The more correct term to refer to what we’ve called “word” is token: it is a piece of text surrounded by whitespace. We can say now that the next() method finds and returns the next token, while the nextLine() reads all data till the end of the current line.
+Note that in Java whitespace includes not only the space character, but mostly everything that looks empty when printed: a tab, the newline character, and other non-printing
+ characters.(Nota que los espacios en Java no solo incluyen el caracter espacio sino casi todo lo que parezca vacio cuando imprime: como tab, el caracter de nueva linea y otros
+ caracteres no imprimibles) 
+In this article, we are dealing with space and newline characters: technically, we produce a corresponding character when pressing Enter and starting a new line. The term
+ "whitespace" is used to refer to either of them. The more correct term to refer to what we’ve called “word” is token: it is a piece of text surrounded by whitespace. We can say
+ now that the next() method finds and returns the next token, while the nextLine() reads all data till the end of the current line.(En este articulo tratamos con espacio y
+ caracteres de nueva linea: tecnicamente, producimos un caracter correspondiente cuando presionamos enter y comenzamos una nueva linea, el termino espacio en blanco es usado para
+ referirse a cualquiera de los dos. El termino correcto para referir a lo que llamamos palabra es token: es una pieza de texto rodeado por espacio en blanco. Podemos decir ahora
+ que el metodo next() encuentra y retorna el siguiente token, mientra que el metodo nextLine() lee toda la data hasta el final de la linea actual)
 
-Now you can read a whole word and even a whole line invoking these two methods. To invoke both of them correctly, it is important to know the difference between them.
+Now you can read a whole word and even a whole line invoking these two methods. To invoke both of them correctly, it is important to know the difference between them.(Ahora
+ puedes leer una palabra entera o incluso una linea entera invocando estos dos metodos. Para invocarlos correctamente, lo importante es conocer la diferencia entre ellos)
 
-Reading a multiline input
-Reading multiline input may still be a bit tricky: you should take into account the position of the cursor and the reading methods behavior.
+Reading a multiline input(Leyendo un ingreso multilinea)
+Reading multiline input may still be a bit tricky: you should take into account the position of the cursor and the reading methods behavior.(Leyendo un ingreso multilinea puede
+ ser un poco engañoso: Deberias tener en cuenta la posicion del cursor y los comportamientos de los metodos de lectura)
 
-Let’s investigate this process with an example:
+Let’s investigate this process with an example:(Investiguemos este proceso con un ejemplo)
 
 |This is a simple
 
 multiline input,
 
 that is being read
-| is a position of the cursor before reading the input.
+| is a position of the cursor before reading the input.( | es una posicion del cursor antes de leer el ingreso)
 
-If we invoke the next() method, the program will read the input till the whitespace, as indicated by the color blue:
+If we invoke the next() method, the program will read the input till the whitespace, as indicated by the color blue:(Si invocamos el metodo next() el programa leera el ingreso
+ hasta el espacio en blanco como esta indicado)
 
 This| is a simple
 
 multiline input,
 
 that is being read
-After invoking the nextLine() method the program reads the whole line starting from the whitespace. This data is indicated by a green color. The nextLine() places the cursor at the beginning of a new line (if there is such a line in your input):
+After invoking the nextLine() method the program reads the whole line starting from the whitespace. This data is indicated by a green color. The nextLine() places the cursor at
+ the beginning of a new line (if there is such a line in your input):(Luego de invocar el metodo nextLine() el programa leera la linea entera empezando desde el espacio en
+ blanco. Esta data esta indicada. El metodo nextLine() coloca el cursor al comienzo de la nueva linea)
 
 This is a simple
 
 |multiline input,
 
 that is being read
-Then, let's invoke the next() method two times. The first input is indicated by an orange color. You may see that the position of the cursor is right after the word and before the whitespace:
+Then, let's invoke the next() method two times. The first input is indicated by an orange color. You may see that the position of the cursor is right after the word and before
+ the whitespace:(Luego invocamos el metodo next() dos veces. El primer ingreso esta indicado. Puedes ver que la posicion del cursor esta justo despues de la palabra y antes del
+ espacio en blanco:)
 
 This is a simple
 
 multiline| input,
 
 that is being read
-Now we invoke the next() method again. The program outputs the second word in the line without whitespace. It doesn't even matter how many space characters are there, because the next() method will skip the whitespace until it finds the next token.
+Now we invoke the next() method again. The program outputs the second word in the line without whitespace. It doesn't even matter how many space characters are there, because the
+ next() method will skip the whitespace until it finds the next token.(Ahora invocamos el metodo next() otra vez. El programa egresa la segunda palabra en la linea sin espacio en
+ blanco. No importa cuantos caracteres hay porque el metodo next() saltara el espacio en blanco hasta que encuentre el siguiente token)
 
-The second input is indicated by light blue color. As you may see, the position of the cursor is still at the current line right before the new line and after the comma:
+The second input is indicated by light blue color. As you may see, the position of the cursor is still at the current line right before the new line and after the comma:(El
+ segundo ingreso esta indicado. Como puedes ver la posicion del cursor permanece en la linea actual justo antes de la nueva linea y des pues de la coma:)
 
 This is a simple
 
 multiline input,|
 
 that is being read
-Here is a tricky thing about the nextLine() method that also shows a major difference between the next() and the nextLine() methods. As you already know, the program will read input from the position of the cursor till the new line (again, if there is such a line in your input). In this example the cursor is located before the new line: thus, the nextLine() method will return an empty line ("") and place the cursor at the beginning of a new line.
+Here is a tricky thing about the nextLine() method that also shows a major difference between the next() and the nextLine() methods. As you already know, the program will read
+ input from the position of the cursor till the new line (again, if there is such a line in your input). In this example the cursor is located before the new line: thus, the
+ nextLine() method will return an empty line ("") and place the cursor at the beginning of a new line.(Aqui hay una cosa engañosa sobre el metodo nextLine() y next(). Como puedes
+ saber el programa leera el ingreso desde la posicion del cursor hasta la nueva linea, de nuevo si hay una linea en tu ingreso. En este ejemplo el cursor esta localizado antes de
+ la nueva linea: ademas, el metodo nextLine() retornara una linea vacia("") y colocara el cursor al principio de una nueva linea)
 
 This is a simple
 
 multiline input,
 
 |that is being read
-To sum up, let's look at the code as a whole and consider the variables we have just read:
+To sum up, let's look at the code as a whole and consider the variables we have just read:(Para resumir miremos al codigo como un todo y consideremos las variables que leimos:)
 
 import java.util.Scanner; 
 
@@ -759,12 +814,21 @@ public class Main {
         
     }
 }
-This example may seem artificial, but it should help you to catch the difference between these two methods. Remember that usually the variables are named in a more expressive way.
+This example may seem artificial, but it should help you to catch the difference between these two methods. Remember that usually the variables are named in a more expressive
+ way.(Este ejemplo puede verse artificial pero deberia ayudar a entender la diferencia entre estos dos metodos. Recuerda que usualmente las variables son llamadas en una forma
+ mas expresiva)
 
 Conclusion
-We can read data from the standard input with a special Scanner class. The next() and the nextLine() methods will help you to read strings. Both of them are used for getting input, but they act differently. The next() method can read the input only till the whitespace while the nextLine() method reads the input till the end of the whole line.
+We can read data from the standard input with a special Scanner class. The next() and the nextLine() methods will help you to read strings. Both of them are used for getting
+ input, but they act differently. The next() method can read the input only till the whitespace while the nextLine() method reads the input till the end of the whole line.
+(Podemos leer datos del ingreso estandar con una clase especial Scanner. Los metodos next() y nextLine() te ayudaran a leer strings. Ambos son usados para ingresar pero actuan
+ diferente. El metodo next() puede leer solo el ingreso hasta el espacio en blanco mientras el metodo nextLine() lee el ingreso hasta el final de la linea entera) 
 
-We recommend you to use the class Scanner when solving programming problems. It is one of the simplest ways to get values from the standard input. More complex ways to read data will be discussed in further topics.
+We recommend you to use the class Scanner when solving programming problems. It is one of the simplest ways to get values from the standard input. More complex ways to read data
+ will be discussed in further topics.(Recomendamos que uses la clase Scanner cuando ssolucionas problemas de programacion. Es una de las maneras mas simples de obtener valores
+ del estandar de ingreso. Formas mas complejas de leer datos seran discutidas en temas mas lejanos)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!--------  Theory: Arithmetic operations ----------!>
 In real life, we often perform arithmetic operations. They help us to determine the change from a purchase, calculate the area of a room, count the number of people in a queue, and so on. The same operations are used in programs.
@@ -826,6 +890,9 @@ parentheses
 unary plus/minus
 multiplication, division
 addition, subtraction
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <!----------- Theory: Integer types and operations-----------!>
 Basic information about integer types
 Java provides several types which represent integer numbers including positive, negative and zero. In practice, the most used types are int and long. The first type can store numbers from a smaller range than the second one, but it is often enough (especially, in this topic). You can perform all arithmetic operations (+, -, *, /, %) with variables of integer types.
@@ -938,6 +1005,8 @@ class Main {
         }
     }
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!--------- Theory: Units of information ----------!>
 Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!
