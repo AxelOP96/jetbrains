@@ -268,6 +268,8 @@ The output:
 I know Java well.
 Pay attention to the spaces between words. We pass them to methods for printing.(Presta atencion a los espacios entre palabras. Los pasamos a metodos para imprimir)
 
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Printing numbers and characters(Imprimiendo numeros y caracteres)
@@ -290,7 +292,9 @@ It outputs:
 22E81
 As is the case with strings, none of the characters contain quotes.(Como ocurre en el caso con los strings ninguno de los caracteres contiene comillas)
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!----- Declaring and initializing-----!>
 
@@ -388,7 +392,9 @@ Enter the number of declared variables in the code fragment.(Ingresa el numero d
 For example, if you think that eight variables are here, enter the number:(Por ejemplo si piensas que son ocho variables ingresa el numero)
 en este caso son 5 ya que reasignar una variable cuenta como asignarla
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!-----Commentaries -----!>
 Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation
@@ -459,7 +465,9 @@ class Program {
 Do not be afraid if you have not understood the documentation comments completely. This will be considered in other topics.(No tengas miedo si no entiendes los comentarios de
  documentacion completamente)
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!---------- ----------!>
 There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to write code that is clean and easy to read? This is trickier
@@ -609,6 +617,7 @@ Style guides provide the conventions to help create well-readable and consistent
  cosas sobre Java y te volveras un programador habilidoso pero mantener las guias de estilo siempre permaneceran imporatantes. No te preocupes, piensa: No necesitas aprender
  todas las convenciones a la primera. En los siguientes temas seguiremos las convenciones de codigo Oracle y te alentaremos a que lo hagas con nosotros) 
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---------- Why is naming important?---------!>
@@ -661,7 +670,9 @@ These conventions are optional, but it is strongly recommended to follow them. A
  other Java programmers.(Estas convenciones son opcionales, pero es fuertemente recomendado seguirlas. Como mencionamos al principio de esta leccion, van a hacer tu codigo mas
  leible para ti y otros programadores Java)
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!----------Theory: Scanning the input-----------!>
 The standard input is a stream of data going into a program. It is supported by the operating system. By default, the standard input obtains data from the keyboard input but it's
@@ -831,19 +842,19 @@ We recommend you to use the class Scanner when solving programming problems. It 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!--------  Theory: Arithmetic operations ----------!>
-In real life, we often perform arithmetic operations. They help us to determine the change from a purchase, calculate the area of a room, count the number of people in a queue, and so on. The same operations are used in programs.
+In real life, we often perform arithmetic operations. They help us to determine the change from a purchase, calculate the area of a room, count the number of people in a queue, and so on. The same operations are used in programs.(En la vida real, a veces realizamos operaciones aritmeticas. Ellos nos ayudan a determinar el cambio de una compra, calcular el area de un cuarto, contar el numero de gente en una fila, etc)
 
-Binary arithmetic operators
-The Java programming language provides operators to perform arithmetic operations:
+Binary arithmetic operators(Operadores aritmeticos binarios)
+The Java programming language provides operators to perform arithmetic operations:(El lenguaje de programacion Java provee de operadores para realizar operaciones aritmeticas:) 
 
-addition +
-subtraction -
-multiplication *
-integer division /
-remainder %
-The operators are called binary because they take two values as operands.
+addition +(suma)
+subtraction -(resta)
+multiplication *(multiplicacion)
+integer division /(division)
+remainder %(resto)
+The operators are called binary because they take two values as operands.(Los operadores son llamados binarios porque toman dos valores como operandos)
 
-The following example prints results of addition, subtraction, and multiplication.
+The following example prints results of addition, subtraction, and multiplication.(El siguiente ejemplo imprime resultados de suma, resta y multiplicacion)
 
 System.out.println(13 + 25); // prints 38
 System.out.println(20 + 70); // prints 90
@@ -853,45 +864,47 @@ System.out.println(30 - 70); // prints -40
 
 System.out.println(21 * 3);  // prints 63
 System.out.println(20 * 10); // prints 200
-The / operator returns the integer part of the division of two integer numbers, and any fractional part is discarded.
+The / operator returns the integer part of the division of two integer numbers, and any fractional part is discarded.( el operador / regresa la parte entera de la division de dos numeros enteros y cualquier parte fraccional es descartada)
 
 System.out.println(8 / 3); // prints 2
 System.out.println(41 / 5); // prints 8
-The % in Java is the modulus or remainder operator. It returns the remainder of the division of two numbers. Note, that when the dividend is less than the divisor, the quotient is zero and the remainder equals the dividend. If you still feel uneasy about modulo operation, check out the wiki.
+The % in Java is the modulus or remainder operator. It returns the remainder of the division of two numbers. Note, that when the dividend is less than the divisor, the quotient is zero and the remainder equals the dividend. If you still feel uneasy about modulo operation, check out the wiki.(El % en Java es el modulo u operador resto. Regresa el resto de una division de dos numeros. Nota que cuando el dividendo es menos que el divisor el cociente es cero y el resto es igual al dividendo. Si todavia parece dificil la operacion modulo chquea la wiki)
 
 System.out.println(10 % 3) // prints 1, because 10 divided by 3 leaves a remainder of 1
 System.out.println(12 % 4) // prints 0, because 12 divided by 4 leaves no remainder
 System.out.println(5 % 9) // prints 5, because 5 divided by 9 leaves a remainder of 5
-Writing complex expressions
-The operations can be combined to write more complex expressions:
+Writing complex expressions(Escribiendo operaciones complejas)
+The operations can be combined to write more complex expressions:(Las operaciones pueden ser combinadas a escribir expresiones mas complejas:)
 
 System.out.println(1 + 3 * 4 - 2); // prints 11
-The calculation order coincides with arithmetic rules. Multiplication has a higher priority level than addition and subtraction, so the operation 3 * 4 is calculated first.
+The calculation order coincides with arithmetic rules. Multiplication has a higher priority level than addition and subtraction, so the operation 3 * 4 is calculated first.(el orden de calculo coincide con las reglas aritmeticas. La multiplicacion tiene una prioridad mas alta que la suma y la resta, por lo que la opracion 3 * 4 es calculado primero)
 
-To specify the order of execution we can use parentheses as in the following:
+To specify the order of execution we can use parentheses as in the following:(Para especificar el orden de ejecucion podemos usar en parentesis como en lo siguiente:)
 
 System.out.println((1 + 3) * (4 - 2)); // prints 8
-As in arithmetic, parentheses can be nested. You can also use them for clarity.
+As in arithmetic, parentheses can be nested. You can also use them for clarity.(Como en aritmetica, los parentesis pueden anidarse. Pueden usarlos para mas claridad)
 
-Unary operators
-A unary operator takes a single value as the operand.
+Unary operators(Operadores unarios)
+A unary operator takes a single value as the operand.(Un operador unario toma un valor unico como el operando)
 
-The unary plus operator indicates a positive value. It's an optional operator.
+The unary plus operator indicates a positive value. It's an optional operator.(El operador unario + indica un valor positivo. Es un operador opcional)
 System.out.println(+5); // prints 5
-The unary minus operator negates a value or an expression.
+The unary minus operator negates a value or an expression./(El operador unario - niega el valor o una expresion)
 System.out.println(-8);  // prints -8
 System.out.println(-(100 + 4)); // prints -104
-They both have a higher level of precedence than the multiplication and division operators.
+They both have a higher level of precedence than the multiplication and division operators.(Ambos tienen un nivel mas alto de precedencia que la multiplicacion y operadores de division)
 
-The precedence order
-There is a precedence order of all arithmetic operators, including parentheses. The list below is sorted from the highest to the lowest precedence level.
+The precedence order(El orden de precedencia)
+There is a precedence order of all arithmetic operators, including parentheses. The list below is sorted from the highest to the lowest precedence level.(Hay un orden de precedencia de todos los operadores aritmeticos, incluyendo parentesis. La lista debajo esta ordenada del mas alto al mas bajo nivel de precedencia)
 
 parentheses
 unary plus/minus
 multiplication, division
 addition, subtraction
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!----------- Theory: Integer types and operations-----------!>
 Basic information about integer types
@@ -1006,7 +1019,9 @@ class Main {
     }
 }
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 <!--------- Theory: Units of information ----------!>
 Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!
@@ -1056,6 +1071,8 @@ If you want to convert 1 GB to kB, you should multiply the number by a thousand 
 
 1 GB = 1 * 1000 * 1000 = 1000000 kB
 Congratulations, now you have studied one of the basic topics of computer science and are ready to storm new dizzying heights of knowledge.
+
+
 
 <!----------- Theory: Sizes and ranges-------------!>
 In this lesson, we will discuss the classification and properties of primitive types provided by Java. Maybe you already know a few of them. The basic types can be separated into several groups according to meaning. Types from the same group can be operated in the same way, but have different sizes and, as consequence, represent different ranges of values.
