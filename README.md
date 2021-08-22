@@ -233,7 +233,7 @@ class Main {
 
 Standard output is a receiver to which a program can send information (text). It is supported by all common operating systems. Java provides a special object System.out to work with the standard output. We will often use it to print something.(La salida estandar es un recibidor en el cual un programa puede recibir informacion, texto. Esta suportado por todos los sistemas operativos comunes. Java provee un objeto especial System.out para trabajar con la salida estandar. Nosotros lo usaremos seguido para imprimir algo)
 
-The println method displays the passed string followed by a new line on the screen (print-line). As an example, the following code fragment prints four lines.(El mtodo println muestra el string seguido por una nueva linea en la pantalla)
+The println method displays the passed string followed by a new line on the screen (print-line). As an example, the following code fragment prints four lines.(El metodo println muestra el string seguido por una nueva linea en la pantalla)
 
 System.out.println("I ");
 System.out.println("know ");
@@ -266,11 +266,15 @@ System.out.print("well.");
 The output:
 
 I know Java well.
-Pay attention to the spaces between words. We pass them to methods for printing.(Presta atencion a los espacios entre palabras. Los pasamos a metodos para imprimir)
+
+Pay attention to the spaces between words. We pass them to methods for printing.(Presta atencion a los espacios entre palabras. Los pasamos a metodos para imprimir). 
+
+
 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Printing numbers and characters(Imprimiendo numeros y caracteres)
 Both methods println and print allow a program to print not only strings and characters, but also numbers.(Ambos metodos println y print permiten al promgrama no solo imprimir strings y caracteres sino tambien numeros.)
@@ -620,6 +624,7 @@ Style guides provide the conventions to help create well-readable and consistent
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 <!---------- Why is naming important?---------!>
 
 As you may know, every variable has a name that uniquely identifies it among other variables. Giving a good name to a variable may not be as simple as it seems. Experienced
@@ -907,10 +912,10 @@ addition, subtraction
 
 
 <!----------- Theory: Integer types and operations-----------!>
-Basic information about integer types
-Java provides several types which represent integer numbers including positive, negative and zero. In practice, the most used types are int and long. The first type can store numbers from a smaller range than the second one, but it is often enough (especially, in this topic). You can perform all arithmetic operations (+, -, *, /, %) with variables of integer types.
+Basic information about integer types(Informacion basica sobre los tipos enteros)
+Java provides several types which represent integer numbers including positive, negative and zero. In practice, the most used types are int and long. The first type can store numbers from a smaller range than the second one, but it is often enough (especially, in this topic). You can perform all arithmetic operations (+, -, *, /, %) with variables of integer types.(Java provee distintos tipos que representan numeros enteros incluyendo positivos, negativos y el cero. En la practica los tipos mas usados son int y long. El primer tipo puede almacenar numeros de un rango mas pequeño que el segundo, pero es a menudo suficiente, especialmente en este tema. Puedes realizar todas las operaciones aritmeticas con las variables de tipos enteros)
 
-Let's look at some examples below.
+Let's look at some examples below.(Miremos ejemplos debajo)
 
 int two = 2;
 int ten = 10;
@@ -919,19 +924,20 @@ int twelve = two + ten; // 12
 int eight = ten - two;  // 8
 int twenty = two * ten; // 20
 int five = ten / two;   // 5
-int zero = ten % two;   // 0, no remainder
+int zero = ten % two;   // 0, no remainder(No hay resto)
 
 int minusTwo = -two; // -2
 This code demonstrates how to assign values to int variables as well as how to perform arithmetic operations with them. We hope that you already understand all operations well.
+(Este codigo demuestra como asignar valores a variables int como tambien realizar operaciones aritmeticas con ellas. Esperamos que ya entiendas todas las operaciones bien)
 
-To improve the readability of your code, the special underscore character _ can be used to separate groups of digits within a number.
+To improve the readability of your code, the special underscore character _ can be used to separate groups of digits within a number.(Para mejorar la lectura de tu codigo el caracter especial _ puede ser usado para separar grupos de digitos con un numero)
 
 int million = 1_000_000;
-You may also print a value of an int variable:
+You may also print a value of an int variable:(Puedes imprimir un valor de una variable int:)
 
 int number = 100;
 System.out.println(number); // 100
-All arithmetic operations work with the long type as well.
+All arithmetic operations work with the long type as well.(Todas las operaciones aritmeticas trabajan con el tipo long tambien)
 
 long one = 1L;
 long twentyTwo = 22L; // L or l is a literal for longs
@@ -939,22 +945,26 @@ long bigNumber = 100_000_000_000L;
 
 long result = bigNumber + twentyTwo - one; 
 System.out.println(result); // 100000000021
-If a number ends with the letter L or l it is considered as long, otherwise, it is int. We recommended you to use the uppercase letter L because the lower case letter l is very similar to the digit 1.
+If a number ends with the letter L or l it is considered as long, otherwise, it is int. We recommended you to use the uppercase letter L because the lower case letter l is very
+ similar to the digit 1.(Si un numero termina con la letra L o l es consideraso como long, de otra forma es un int. Recomendamos usar la letra L porque la minuscula l es muy similar al digito 1)
 
-Note, use long's numbers only if it is really necessary (to process big values)
-The forms of the assignment operator
-Suppose, you want to add some value to a variable. You may write something like this:
+Note, use long's numbers only if it is really necessary (to process big values)(Nota, usa los numeros long solo si es realmente necesario)
+The forms of the assignment operator(Las formas del operador de asignacion)
+Suppose, you want to add some value to a variable. You may write something like this:(Supon que quieres agregar algun valor a una variable. Escribiras algo como esto:)
 
 int n = 10;
 n = n + 4; // 14
-The assignment operator = has several forms which combine it with an operation to avoid repeating the variable twice:
+The assignment operator = has several forms which combine it with an operation to avoid repeating the variable twice:(El operador de asignacion = tiene varias formas en las que se combina con una operacion para evitar repetir la variable dos veces:)
 
 int n = 10;
 n += 4; // 14
-As you may see, this form looks more concise. There are a few other possible forms *=, /=, %= and some others.
+As you may see, this form looks more concise. There are a few other possible forms *=, /=, %= and some others.(Como puedes ver esta forma parece mas concisa. Hay otras pocas
+ formas posibles *=, /=, %= y algunas otras)
 
-Reading numbers from the standard input
-As a rule, to solve a problem you need to read some data from the outside world, process it, and output the result. The following program reads two numbers from the standard input, adds them, and prints the sum.
+Reading numbers from the standard input(Leyendo numeros del estandar de ingreso) 
+As a rule, to solve a problem you need to read some data from the outside world, process it, and output the result. The following program reads two numbers from the estandar
+ input, adds them, and prints the sum.(Como una regla, para resolver un problema necesitas leer algunods datos del mundo exterior, procesarlos y mostrar el resultado. El
+ siguiente programa lee dos numeros del estandar de ingreso, los agrega e imprime la suma)
 
 import java.util.Scanner;
 
@@ -970,17 +980,17 @@ class Main {
         System.out.println(sum);
     }
 }
-This simple code uses Scanner to read data.
+This simple code uses Scanner to read data.(Este simple codigo usa el Scanner para leer datos)
 
-If we know that the input numbers can be quite large, we can read long's instead of int's:
+If we know that the input numbers can be quite large, we can read long's instead of int's:(Si sabemos que los numeros de ingreso pueden ser largos podemos usar long en lugar de int:)
 
 long a = scanner.nextLong();
 long b = scanner.nextLong();
 
 long sum = a + b;
-No more lines need to be changed in this code.
+No more lines need to be changed in this code.(No se necesitan mas lineas cambiadas en este codigo)
 
-Now you have enough knowledge to write useful programs that process data. You may use the template above for solving code challenges in this lesson. Try to give meaningful names to variables when solving problems.
+Now you have enough knowledge to write useful programs that process data. You may use the template above for solving code challenges in this lesson. Try to give meaningful names to variables when solving problems.(Ahora tienes suficiente conocimiento para escribir programas utiles que procesen datos. Puedes usar el template debajo para resolver desafios de codigo en esta leccion. Trata de darle nombres que tengan significado cuando resuelves problemas)
 
 Para obtener el siguiente numero par al numero ingresado por teclado
 import java.util.Scanner;
