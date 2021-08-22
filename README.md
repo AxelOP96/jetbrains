@@ -229,7 +229,7 @@ class Main {
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<!---- Displaying text using println() and print()-----!>
+ Displaying text using println() and print()
 
 Standard output is a receiver to which a program can send information (text). It is supported by all common operating systems. Java provides a special object System.out to work with the standard output. We will often use it to print something.(La salida estandar es un recibidor en el cual un programa puede recibir informacion, texto. Esta suportado por todos los sistemas operativos comunes. Java provee un objeto especial System.out para trabajar con la salida estandar. Nosotros lo usaremos seguido para imprimir algo)
 
@@ -269,9 +269,9 @@ I know Java well.
 
 Pay attention to the spaces between words. We pass them to methods for printing.(Presta atencion a los espacios entre palabras. Los pasamos a metodos para imprimir). 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -298,9 +298,11 @@ As is the case with strings, none of the characters contain quotes.(Como ocurre 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<!----- Declaring and initializing-----!>
+ Declaring and initializing
+ 
 
 A variable is a placeholder for storing a value of a particular type: a string, a number, or something else. Every variable has a name (also known as an identifier) to distinguish it from others. Before you start using a variable, you must declare it.(Una variable en un lugar para almacenar un valor de un tipo particular: un string, un numero o algo mas. Cada variable tiene un nombre, tambien conocido como un identificador, para distinguirlo de otros. Antes de usar una variable debes declararla)
 
@@ -1083,6 +1085,7 @@ If you want to convert 1 GB to kB, you should multiply the number by a thousand 
 Congratulations, now you have studied one of the basic topics of computer science and are ready to storm new dizzying heights of knowledge.
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!----------- Theory: Sizes and ranges-------------!>
 In this lesson, we will discuss the classification and properties of primitive types provided by Java. Maybe you already know a few of them. The basic types can be separated into several groups according to meaning. Types from the same group can be operated in the same way, but have different sizes and, as consequence, represent different ranges of values.
