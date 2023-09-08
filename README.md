@@ -349,23 +349,23 @@ One important feature of variables is that they can be changed. You don't need t
  operator.(Una herramienta importante de las variables es que pueden ser cambiadas. No necesitas declarar una variable otra vez para cambiar su valor; Solo asigna un nuevo valor
  a ella usando el operador =)
 
-Let's declare a variable named dayOfWeek and print its value before and after changing:(Declaremos una variable llamada DiaDeLaSemana e imprimamos su valor antes y despues de
- cambiar)
+Let's declare a variable named dayOfWeek and print its value before and after changing:(Declaremos una variable llamada DiaDeLaSemana e imprimamos su valor antes 
+y despues de cambiar)
 
 String dayOfWeek = "Monday";
 System.out.println(dayOfWeek); // Monday
 
 dayOfWeek = "Tuesday";
 System.out.println(dayOfWeek); // Tuesday
-There is one restriction for variables: you can only assign a value of the same type as the type of the initial variable. So, the following code is not correct:(Solo hay una
- restriccion para las variables: solo puedes asignar un valor del mismo tipo que el tipo inicial de la variable. Por lo que el siguiente codigo no es correcto:)
+There is one restriction for variables: you can only assign a value of the same type as the type of the initial variable. So, the following code is not correct:(Solo hay
+una restriccion para las variables: solo puedes asignar un valor del mismo tipo que el tipo inicial de la variable. Por lo que el siguiente codigo no es correcto:)
 
 int number = 10;
 number = 11; // ok
 number = "twelve"; // it does not work!
 Alternative forms of declaration(Formas alternativas de declaracion)
-There are several alternative forms of declaration which are less commonly used in practice. Here are several of them in particular examples.(Hay varias formas alternativas de
- declaracion que son menos usadas en la practica. Aqui hay algunas de ellas en ejemplos particulares.)
+There are several alternative forms of declaration which are less commonly used in practice. Here are several of them in particular examples.(Hay varias formas 
+alternativas de declaracion que son menos usadas en la practica. Aqui hay algunas de ellas en ejemplos particulares.)
 
 Declaring several variables of the same type as a single statement:(Declarando varias variables del mismo tipo como una sola declaracion:) 
 String language = "java", version = "8 or newer";
@@ -385,10 +385,10 @@ var language = "Java"; // String
 var version = 10; // int
 This feature can be a bit controversial: on the one hand, it allows your code to be more concise. On the other hand, since it doesn't indicate the type explicitly, it may affect
  the code readability in a bad way. For now, it's enough to understand the basic idea. We will not use type inference in our theory so that our educational platform is suitable
- for people who use earlier versions of Java. But if you would like to practice it, you may use type inference in our exercises as they fully support Java 10.(Esta herramienta
- `puede ser algo controversial: por un lado, permite que tu codigo sea mas conciso. Por el otro como no indica el tipo explicitamente puede afectar a tu lectura de codigo en una
- mala manera. Por ahora es suficiente que entiendas la idea basica. No usaremos la inferencia de tipos en la teoria por lo que esto ayuda a la gente con versiones anteriores de
- Java. Pero si quieres practicarlo, puedes usar inferencia de tipos en nuestro ejercicios ya que soportan completamente Java 10)
+ for people who use earlier versions of Java. But if you would like to practice it, you may use type inference in our exercises as they fully support Java 10.(Esta
+ herramienta puede ser algo controversial: por un lado, permite que tu codigo sea mas conciso. Por el otro como no indica el tipo explicitamente puede afectar a tu
+ lectura de codigo en una mala manera. Por ahora es suficiente que entiendas la idea basica. No usaremos la inferencia de tipos en la teoria por lo que esto ayuda a la
+ gente con versiones anteriores de  Java. Pero si quieres practicarlo, puedes usar inferencia de tipos en nuestro ejercicios ya que soportan completamente Java 10)
 
 int i = 0, j = 0, k = 0;
 String s = "s", str = "str";
@@ -403,13 +403,13 @@ en este caso son 5 ya que reasignar una variable cuenta como asignarla
 
 
 <!-----Commentaries -----!>
-Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the compilation
- process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to explain how and why our
- code works.(Dentro de un programa Java, podes escribir un texto especial que va a ser iognorado por el compilador Java conocido como comentario. Los comentarios te permiten
- excluir codigo del proceso de compilacion(Deshabilitandolo) o clarificando una parte de codigo a ti mismo o a otros desarrolladores. En nuestros materiales, usamos comentarios
- en la teoria y la practica para explicar como y por que nuestro codigo funciona)
+Inside a Java program, you can write a special text that will be ignored by the java compiler — known as the comment. Comments allow you to exclude code from the
+compilation process (disable it) or clarify a piece of code to yourself or other developers. In our materials, we use comments in the theory and practice lessons to
+explain how and why our code works.(Dentro de un programa Java, podes escribir un texto especial que va a ser iognorado por el compilador Java conocido como comentario.
+Los comentarios te permiten excluir codigo del proceso de compilacion(Deshabilitandolo) o clarificando una parte de codigo a ti mismo o a otros desarrolladores. En
+nuestros materiales, usamos comentarios en la teoria y la practica para explicar como y por que nuestro codigo funciona)
 
-The Java programming language supports three kinds of comments.(El lenguaje de progrmacion Java soporta tres tipos de comentarios.) 
+The Java programming language supports three kinds of comments.(El lenguaje de programación Java soporta tres tipos de comentarios.) 
 
 End-of-line comments(Comentarios de fin de linea)
 The java compiler ignores any text from // to the end of the line.(El compilador Java ignora cualquier texto despues de // hasta el final de la linea
@@ -656,8 +656,7 @@ It is important not to break these rules; otherwise, the program will not work.(
 Here are some valid names of variables:(Aqui hay varios nombres validos de variables)
 
 number, $ident, bigValue, _val, abc, k, var
-Note that to keep backward compatibility the word var can be used as a variable name even after Java 10 was released.(Nota que que para mantener compatibilidad con versiones
- anteriores var puede ser usado como nombre luego de ser liberado Java 10)
+Note that to keep backward compatibility the word var can be used as a variable name even after Java 10 was released.(Nota que que para mantener compatibilidad con versiones anteriores var puede ser usado como nombre luego de ser liberado Java 10)
 And here are some invalid ones:(Y aqui hay varios invalidos)
 
 @ab, 1c, !ab, class
@@ -687,7 +686,7 @@ The standard input is a stream of data going into a program. It is supported by 
  ingreso estandar obtiene data del ingreso por teclado pero es posible redirigirlo de un archivo)
 
 Actually, not all programs need to use the standard input. But we will often use it here to help you master your programming skills! The typical way to solve programming problems
- is the following:(Actualmete no todos los programas necesitan usar el ingreso estandar. Pero lo usaremos seguido para ayudarte a dominar tus habilidades de programacion)
+ is the following:(Actualmente no todos los programas necesitan usar el ingreso estandar. Pero lo usaremos seguido para ayudarte a dominar tus habilidades de programacion)
 
 Read data from the standard input (System.in);(Lee datos del ingreso estandar [System.in])
 Process data to obtain a result;(Procesa datos para obtener resultados)
@@ -1036,7 +1035,7 @@ class Main {
 
 
 <!--------- Theory: Units of information ----------!>
-Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!
+Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!(A lo largo de la vida, siempre encontramos algo para medir: la cantidad de comida que necesitamos para cocinar para la familia, la longitud y ancho del sofa que queres poner en el cuarto, nuestro peso y altura. )
 
 Each measurement requires an instrument and its own unit of measurement. For example, bodyweight is measured with scales in kilograms (or pounds), time is measured with clocks in seconds, etc. But how does one measure information?
 
